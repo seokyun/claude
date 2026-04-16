@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a7fa5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d5f8a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="body" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8ecf0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d0d8e4;stop-opacity:1" />
+    </linearGradient>
+    <clipPath id="circle">
+      <circle cx="200" cy="200" r="200"/>
+    </clipPath>
+  </defs>
+
+  <!-- 배경 -->
+  <circle cx="200" cy="200" r="200" fill="url(#bg)"/>
+
+  <!-- 몸통 (어깨/정장) -->
+  <ellipse cx="200" cy="370" rx="130" ry="100" fill="#1a3a5c" clip-path="url(#circle)"/>
+  <ellipse cx="200" cy="340" rx="110" ry="90" fill="#1e4976" clip-path="url(#circle)"/>
+
+  <!-- 셔츠/넥타이 -->
+  <rect x="180" y="280" width="40" height="80" fill="#ffffff" opacity="0.9" clip-path="url(#circle)"/>
+  <polygon points="200,295 193,310 207,310" fill="#f5a623" clip-path="url(#circle)"/>
+  <rect x="197" y="308" width="6" height="40" fill="#f5a623" clip-path="url(#circle)"/>
+
+  <!-- 목 -->
+  <ellipse cx="200" cy="275" rx="28" ry="22" fill="#f4c08a"/>
+
+  <!-- 얼굴 -->
+  <ellipse cx="200" cy="195" rx="72" ry="82" fill="#f4c08a"/>
+
+  <!-- 귀 -->
+  <ellipse cx="130" cy="205" rx="14" ry="18" fill="#f4c08a"/>
+  <ellipse cx="270" cy="205" rx="14" ry="18" fill="#f4c08a"/>
+
+  <!-- 머리카락 -->
+  <ellipse cx="200" cy="138" rx="72" ry="48" fill="#2c1810"/>
+  <ellipse cx="140" cy="160" rx="28" ry="36" fill="#2c1810"/>
+  <ellipse cx="260" cy="160" rx="28" ry="36" fill="#2c1810"/>
+
+  <!-- 눈썹 -->
+  <path d="M163,185 Q175,178 187,182" stroke="#2c1810" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M213,182 Q225,178 237,185" stroke="#2c1810" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+  <!-- 눈 -->
+  <ellipse cx="175" cy="200" rx="12" ry="10" fill="#ffffff"/>
+  <ellipse cx="225" cy="200" rx="12" ry="10" fill="#ffffff"/>
+  <circle cx="175" cy="201" r="7" fill="#3d2b1f"/>
+  <circle cx="225" cy="201" r="7" fill="#3d2b1f"/>
+  <circle cx="177" cy="198" r="2.5" fill="#ffffff"/>
+  <circle cx="227" cy="198" r="2.5" fill="#ffffff"/>
+
+  <!-- 코 -->
+  <path d="M196,215 Q200,228 204,215" stroke="#c9956a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- 입 (미소) -->
+  <path d="M180,238 Q200,252 220,238" stroke="#c06040" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- 볼 홍조 -->
+  <ellipse cx="155" cy="225" rx="16" ry="10" fill="#f08080" opacity="0.25"/>
+  <ellipse cx="245" cy="225" rx="16" ry="10" fill="#f08080" opacity="0.25"/>
+</svg>

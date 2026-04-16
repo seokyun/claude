@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>보험 설계사 랜딩페이지</title>
+
+  <!-- Google Fonts: Noto Sans KR -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===== 전역 변수 및 기본 리셋 ===== */
+    :root {
+      --color-primary: #4a5568;
+      --color-primary-dark: #2d3748;
+      --color-gold: #f5a623;
+      --color-gold-light: #ffc85c;
+      --color-bg: #f5f7fa;
+      --color-card-bg: #e8ecf0;
+      --color-white: #ffffff;
+      --color-text: #2d3748;
+      --color-text-light: #718096;
+      --color-border: #dde3ea;
+      --color-placeholder: #cccccc;
+      --radius: 12px;
+      --shadow: 0 4px 16px rgba(0,0,0,0.08);
+      --transition: 0.3s ease;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: linear-gradient(160deg, #f8fafd 0%, #f2f5fb 50%, #f5f7fa 100%);
+      background-attachment: fixed;
+      color: var(--color-text);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { display: block; max-width: 100%; }
+    ul { list-style: none; }
+
+    /* ===== 페이드인 애니메이션 (Intersection Observer) ===== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== 섹션 공통 스타일 ===== */
+    .section {
+      padding: 60px 20px;
+    }
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-primary-dark);
+      margin-bottom: 32px;
+      text-align: center;
+    }
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 3px;
+      background: var(--color-gold);
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    /* ============================================================
+       섹션 1: 헤더 (Header) - 상단 sticky 고정
+    ============================================================ */
+    #header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--color-white);
+      color: var(--color-text);
+      padding: 0 20px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      border-bottom: 2px solid var(--color-gold);
+    }
+
+    .header-brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+    .header-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-primary-dark);
+    }
+    .header-sub {
+      font-size: 0.72rem;
+      font-weight: 400;
+      color: var(--color-text-light);
+    }
+
+    .header-phone-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--color-gold);
+      color: var(--color-white);
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 8px 14px;
+      border-radius: 24px;
+      white-space: nowrap;
+    }
+    .header-phone-btn:hover { background: var(--color-gold-light); }
+
+    /* ============================================================
+       섹션 2: 히어로 (Hero Section) - 라이트 그레이 그라디언트
+    ============================================================ */
+    #hero {
+      background: linear-gradient(135deg, #d4e5f5 0%, #deeaf5 25%, #eaf1f8 55%, #f3f6fb 80%, #f8fafd 100%);
+      color: var(--color-text);
+      padding: 48px 24px 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .hero-content {
+      flex: 1;
+      min-width: 220px;
+    }
+    .hero-intro {
+      font-size: 0.9rem;
+      color: var(--color-gold);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+    }
+    .hero-name {
+      font-size: 2rem;
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      color: var(--color-primary-dark);
+    }
+    .hero-subtitle {
+      font-size: 0.88rem;
+      color: var(--color-text-light);
+      line-height: 1.7;
+      margin-bottom: 28px;
+      max-width: 280px;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .btn-call {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--color-gold);
+      color: var(--color-white);
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 14px 28px;
+      border-radius: 32px;
+      border: none;
+      cursor: pointer;
+      transition: background var(--transition), transform var(--transition);
+    }
+    .btn-call:hover { background: var(--color-gold-light); transform: translateY(-2px); }
+
+    .btn-kakao {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #FEE500;
+      color: #3A1D1D;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 14px 28px;
+      border-radius: 32px;
+      border: none;
+      cursor: pointer;
+      transition: opacity var(--transition), transform var(--transition);
+    }
+    .btn-kakao:hover { opacity: 0.88; transform: translateY(-2px); }
+
+    /* 프로필 사진 영역 */
+    .hero-photo-wrap {
+      flex-shrink: 0;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* 외부 반짝임 링 레이어 */
+      filter: drop-shadow(0 12px 40px rgba(245,166,35,0.28)) drop-shadow(0 4px 16px rgba(0,0,0,0.10));
+    }
+    /* 골드 그라디언트 링 배경 */
+    .hero-photo-wrap::before {
+      content: '';
+      position: absolute;
+      width: 186px;
+      height: 186px;
+      border-radius: 50%;
+      background: conic-gradient(
+        from 135deg,
+        #f5c842 0deg,
+        #f5a623 80deg,
+        #e8891a 140deg,
+        #c9720e 200deg,
+        #f5a623 260deg,
+        #fde27a 320deg,
+        #f5c842 360deg
+      );
+      z-index: 0;
+    }
+    /* 내부 백색 패딩 링 */
+    .hero-photo-wrap::after {
+      content: '';
+      position: absolute;
+      width: 174px;
+      height: 174px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.85);
+      z-index: 1;
+    }
+    .hero-photo {
+      width: 164px;
+      height: 164px;
+      border-radius: 50%;
+      object-fit: cover;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-photo-placeholder {
+      width: 164px;
+      height: 164px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #e8ecf0 0%, #f5f7fa 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      color: var(--color-text-light);
+      font-size: 0.72rem;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-photo-placeholder svg {
+      width: 52px;
+      height: 52px;
+      opacity: 0.5;
+    }
+
+    /* ============================================================
+       섹션 3: 전문분야 (Specialty)
+    ============================================================ */
+    #specialty {
+      background: linear-gradient(170deg, #ffffff 0%, #f4f7fc 40%, #edf2f9 100%);
+    }
+
+    .specialty-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .specialty-card {
+      background: linear-gradient(145deg, #f8fafd 0%, #edf1f8 60%, #e6ecf6 100%);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 18px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      text-align: center;
+      transition: transform var(--transition), box-shadow var(--transition);
+      cursor: default;
+    }
+    .specialty-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+      border-color: var(--color-gold);
+    }
+    .specialty-icon { font-size: 1.8rem; line-height: 1; }
+    .specialty-name { font-size: 0.78rem; font-weight: 500; color: var(--color-primary-dark); }
+
+    /* ============================================================
+       섹션 4: 블로그 포스트 (Blog Posts)
+    ============================================================ */
+    #blog {
+      background: linear-gradient(165deg, #f5f8fd 0%, #eef3fa 50%, #f0f4fb 100%);
+    }
+
+    .blog-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .blog-card {
+      background: linear-gradient(135deg, #ffffff 0%, #f8fbfe 100%);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      transition: transform var(--transition), box-shadow var(--transition);
+      cursor: pointer;
+    }
+    .blog-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+      border-color: var(--color-gold);
+    }
+    .blog-card-title {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--color-text);
+      flex: 1;
+      line-height: 1.5;
+    }
+    .blog-card-arrow {
+      color: var(--color-text-light);
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .blog-more-btn {
+      display: block;
+      margin: 20px auto 0;
+      padding: 12px 36px;
+      background: var(--color-primary);
+      color: var(--color-white);
+      font-size: 0.9rem;
+      font-weight: 500;
+      border: none;
+      border-radius: 28px;
+      cursor: pointer;
+      transition: background var(--transition);
+    }
+    .blog-more-btn:hover { background: var(--color-primary-dark); }
+
+    /* ============================================================
+       섹션 5: 카드뉴스 캐러셀 (Card News)
+    ============================================================ */
+    #cardnews {
+      background: linear-gradient(150deg, #dfe8f4 0%, #e4ecf8 30%, #dbe5f2 60%, #e8eef8 100%);
+      padding: 60px 0;
+    }
+    #cardnews .section-title {
+      color: var(--color-primary-dark);
+      padding: 0 20px;
+    }
+    #cardnews .section-title::after { background: var(--color-gold); }
+
+    .carousel-wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+    .carousel-track {
+      display: flex;
+      gap: 16px;
+      padding: 8px 24px 16px;
+      cursor: grab;
+      user-select: none;
+      transition: transform 0.3s ease;
+    }
+    .carousel-track.grabbing { cursor: grabbing; }
+
+    .carousel-item {
+      flex-shrink: 0;
+      width: 160px;
+    }
+    .carousel-img {
+      width: 160px;
+      height: 284px; /* 9:16 비율 유지 */
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+      display: block;
+    }
+    .carousel-placeholder {
+      width: 160px;
+      height: 284px;
+      background: linear-gradient(170deg, rgba(255,255,255,0.80) 0%, rgba(230,238,250,0.70) 100%);
+      border: 2px dashed var(--color-border);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: var(--color-text-light);
+      font-size: 0.72rem;
+      text-align: center;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.80);
+      border: 1px solid var(--color-border);
+      color: var(--color-primary-dark);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      backdrop-filter: blur(4px);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      transition: background var(--transition);
+    }
+    .carousel-btn:hover { background: var(--color-white); }
+    .carousel-btn-prev { left: 4px; }
+    .carousel-btn-next { right: 4px; }
+
+    /* ============================================================
+       섹션 6: 데일리 뉴스 (Daily News)
+    ============================================================ */
+    #dailynews {
+      background: linear-gradient(175deg, #ffffff 0%, #f6f9fe 50%, #eef3fb 100%);
+    }
+
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .news-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--color-border);
+      cursor: pointer;
+      transition: background var(--transition);
+    }
+    .news-item:first-child { border-top: 1px solid var(--color-border); }
+    .news-item:hover { background: linear-gradient(90deg, #eef4fb 0%, #f6f9fd 100%); padding-left: 6px; }
+    .news-date {
+      flex-shrink: 0;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--color-gold);
+      background: rgba(245, 166, 35, 0.12);
+      padding: 4px 8px;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+    .news-title {
+      font-size: 0.9rem;
+      color: var(--color-text);
+      line-height: 1.5;
+      flex: 1;
+    }
+
+    /* ============================================================
+       섹션 7: 플로팅 채팅 버튼 (Floating CTA)
+    ============================================================ */
+    #floating-cta {
+      position: fixed;
+      bottom: 28px;
+      right: 20px;
+      z-index: 999;
+    }
+    .float-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      background: #FEE500;
+      border-radius: 50%;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+      cursor: pointer;
+      animation: bounce 2.4s infinite;
+      transition: transform var(--transition);
+    }
+    .float-btn:hover { animation: none; transform: scale(1.1); }
+    .float-btn svg { width: 32px; height: 32px; }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-10px); }
+      60% { transform: translateY(-5px); }
+    }
+
+    /* ============================================================
+       섹션 8: 푸터 (Footer)
+    ============================================================ */
+    #footer {
+      background: var(--color-primary-dark);
+      color: rgba(255,255,255,0.65);
+      padding: 40px 24px 80px; /* 하단 여백: 플로팅 버튼 가림 방지 */
+      text-align: center;
+    }
+    .footer-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-gold);
+      margin-bottom: 4px;
+    }
+    .footer-info {
+      font-size: 0.82rem;
+      margin-bottom: 16px;
+    }
+    .footer-copyright {
+      font-size: 0.75rem;
+      margin-bottom: 12px;
+    }
+    .footer-disclaimer {
+      font-size: 0.72rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.4);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 16px;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* ============================================================
+       오류 메시지 화면 (data.json 로드 실패 시)
+    ============================================================ */
+    #error-screen {
+      display: none;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+      padding: 40px 24px;
+      text-align: center;
+      background: linear-gradient(160deg, #f8fafd 0%, #f2f5fb 50%, #f5f7fa 100%);
+    }
+    #error-screen.show { display: flex; }
+    #error-screen .err-icon { font-size: 3rem; }
+    #error-screen .err-title { font-size: 1.2rem; font-weight: 700; color: var(--color-primary-dark); }
+    #error-screen .err-desc { font-size: 0.88rem; color: var(--color-text-light); line-height: 1.7; }
+    #error-screen .err-tip {
+      background: #fff3cd;
+      border: 1px solid #ffc107;
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 0.82rem;
+      color: #856404;
+      max-width: 400px;
+      line-height: 1.7;
+      text-align: left;
+    }
+
+    /* ============================================================
+       반응형: 태블릿 이상
+    ============================================================ */
+    @media (min-width: 600px) {
+      .specialty-grid { grid-template-columns: repeat(4, 1fr); }
+      .hero-name { font-size: 2.4rem; }
+      .carousel-item { width: 200px; }
+      .carousel-img, .carousel-placeholder { width: 200px; height: 356px; }
+    }
+
+    @media (min-width: 900px) {
+      .section { padding: 80px 40px; }
+      #hero { padding: 80px 60px; }
+      .hero-name { font-size: 2.8rem; }
+      .hero-photo-wrap::before { width: 224px; height: 224px; }
+      .hero-photo-wrap::after  { width: 210px; height: 210px; }
+      .hero-photo { width: 198px; height: 198px; }
+      .hero-photo-placeholder { width: 198px; height: 198px; }
+      .hero-cta { flex-direction: row; }
+      .specialty-grid { grid-template-columns: repeat(6, 1fr); }
+      .carousel-item { width: 220px; }
+      .carousel-img, .carousel-placeholder { width: 220px; height: 391px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============================================================
+     오류 화면: data.json 로드 실패 시 표시
+============================================================ -->
+<div id="error-screen">
+  <div class="err-icon">⚠️</div>
+  <div class="err-title">페이지를 불러올 수 없습니다</div>
+  <div class="err-desc">
+    <strong>data.json</strong> 파일을 로드하지 못했습니다.<br/>
+    로컬 파일로 직접 열 경우 브라우저 보안 정책으로 인해 오류가 발생할 수 있습니다.
+  </div>
+  <div class="err-tip">
+    💡 <strong>해결 방법</strong><br/>
+    VS Code에서 <strong>Live Server</strong> 확장을 설치한 후<br/>
+    index.html 파일을 우클릭 → <em>"Open with Live Server"</em> 를 선택하세요.
+  </div>
+</div>
+
+<!-- ============================================================
+     메인 콘텐츠: data.json 로드 후 렌더링
+============================================================ -->
+<div id="app" style="display:none;">
+
+  <!-- 섹션 1: 헤더 -->
+  <header id="header">
+    <div class="header-brand">
+      <span class="header-name" id="h-name-title"></span>
+      <span class="header-sub" id="h-company"></span>
+    </div>
+    <a class="header-phone-btn" id="h-phone-btn" href="#">
+      📞 <span id="h-phone"></span>
+    </a>
+  </header>
+
+  <!-- 섹션 2: 히어로 -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="hero-intro" id="hero-intro"></div>
+      <div class="hero-name" id="hero-name"></div>
+      <div class="hero-subtitle" id="hero-subtitle"></div>
+      <div class="hero-cta">
+        <a class="btn-call" id="hero-phone-btn" href="#">
+          📞 전화 상담하기
+        </a>
+        <a class="btn-kakao" id="hero-kakao-btn" href="#">
+          💬 카카오톡 문의
+        </a>
+      </div>
+    </div>
+    <div class="hero-photo-wrap" id="hero-photo-wrap">
+      <!-- 프로필 사진 자동 탐색 후 삽입 -->
+    </div>
+  </section>
+
+  <!-- 섹션 3: 전문분야 -->
+  <section id="specialty" class="section fade-in">
+    <h2 class="section-title">전문분야</h2>
+    <div class="specialty-grid" id="specialty-grid">
+      <!-- data.json에서 동적 렌더링 -->
+    </div>
+  </section>
+
+  <!-- 섹션 4: 블로그 포스트 -->
+  <section id="blog" class="section fade-in">
+    <h2 class="section-title" id="blog-title"></h2>
+    <ul class="blog-list" id="blog-list">
+      <!-- data.json에서 동적 렌더링 -->
+    </ul>
+    <button class="blog-more-btn" id="blog-more-btn" style="display:none;">
+      + 더보기
+    </button>
+  </section>
+
+  <!-- 섹션 5: 카드뉴스 -->
+  <section id="cardnews" class="fade-in">
+    <h2 class="section-title">카드뉴스 📓</h2>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn carousel-btn-prev" id="carousel-prev" aria-label="이전">&#8249;</button>
+      <div class="carousel-track" id="carousel-track">
+        <!-- 이미지 자동 탐색 후 삽입 -->
+      </div>
+      <button class="carousel-btn carousel-btn-next" id="carousel-next" aria-label="다음">&#8250;</button>
+    </div>
+  </section>
+
+  <!-- 섹션 6: 데일리 뉴스 -->
+  <section id="dailynews" class="section fade-in">
+    <h2 class="section-title">DAILY NEWS</h2>
+    <ul class="news-list" id="news-list">
+      <!-- data.json에서 동적 렌더링 -->
+    </ul>
+  </section>
+
+  <!-- 섹션 7: 플로팅 채팅 버튼 -->
+  <div id="floating-cta">
+    <a class="float-btn" id="float-kakao-btn" href="#" aria-label="카카오톡 문의">
+      <!-- 카카오 아이콘 SVG -->
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="24" cy="22" rx="20" ry="17" fill="#3A1D1D"/>
+        <path d="M24 10C13.507 10 5 16.268 5 24c0 4.76 3.18 8.96 8.03 11.6L11 38l6.27-3.14C18.77 35.29 21.35 35.5 24 35.5c10.493 0 19-6.268 19-14S34.493 10 24 10z" fill="#3A1D1D"/>
+        <ellipse cx="24" cy="22" rx="18" ry="15" fill="#FEE500"/>
+        <rect x="15" y="18" width="3.5" height="8" rx="1.75" fill="#3A1D1D"/>
+        <rect x="21.25" y="18" width="3.5" height="8" rx="1.75" fill="#3A1D1D"/>
+        <rect x="27.5" y="18" width="3.5" height="8" rx="1.75" fill="#3A1D1D"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- 섹션 8: 푸터 -->
+  <footer id="footer">
+    <div class="footer-name" id="footer-name"></div>
+    <div class="footer-info" id="footer-info"></div>
+    <div class="footer-copyright" id="footer-copyright"></div>
+    <div class="footer-disclaimer" id="footer-disclaimer"></div>
+  </footer>
+
+</div><!-- /#app -->
+
+<script>
+/* ============================================================
+   메인 스크립트: data.json 로드 후 전체 페이지 렌더링
+============================================================ */
+
+(async function () {
+
+  /* ---------- data.json 로드 ---------- */
+  let data;
+  try {
+    const res = await fetch('data.json');
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    data = await res.json();
+  } catch (e) {
+    // data.json 로드 실패 시 오류 화면 표시
+    document.getElementById('error-screen').classList.add('show');
+    return;
+  }
+
+  /* ---------- 앱 표시 ---------- */
+  document.getElementById('app').style.display = 'block';
+
+  /* ============================================================
+     헬퍼: 이미지 파일 존재 여부를 onerror로 순차 탐색
+     files: 시도할 경로 배열 → 성공 시 resolve(url), 전부 실패 시 resolve(null)
+  ============================================================ */
+  function findImage(folder, names) {
+    return new Promise((resolve) => {
+      let idx = 0;
+      function tryNext() {
+        if (idx >= names.length) { resolve(null); return; }
+        const url = folder + names[idx++];
+        const img = new Image();
+        img.onload = () => resolve(url);
+        img.onerror = tryNext;
+        img.src = url;
+      }
+      tryNext();
+    });
+  }
+
+  const agent = data.agent;
+  const imgCfg = data.images;
+
+  /* ============================================================
+     섹션 1: 헤더 렌더링
+  ============================================================ */
+  document.title = agent.name + ' ' + agent.title + ' | ' + agent.company;
+  document.getElementById('h-name-title').textContent =
+    agent.name + ' ' + agent.title;
+  document.getElementById('h-company').textContent = agent.company;
+  const hPhone = document.getElementById('h-phone');
+  hPhone.textContent = agent.phone;
+  document.getElementById('h-phone-btn').href = 'tel:' + agent.phone.replace(/-/g, '');
+
+  /* ============================================================
+     섹션 2: 히어로 렌더링
+  ============================================================ */
+  document.getElementById('hero-intro').textContent = agent.intro;
+  document.getElementById('hero-name').textContent = agent.name + ' ' + agent.title;
+  document.getElementById('hero-subtitle').textContent = agent.subtitle;
+  document.getElementById('hero-phone-btn').href = 'tel:' + agent.phone.replace(/-/g, '');
+  document.getElementById('hero-kakao-btn').href = agent.kakaoLink;
+
+  // 프로필 이미지 자동 탐색
+  const profileUrl = await findImage(imgCfg.folder, imgCfg.profile);
+  const photoWrap = document.getElementById('hero-photo-wrap');
+  if (profileUrl) {
+    const img = document.createElement('img');
+    img.className = 'hero-photo';
+    img.src = profileUrl;
+    img.alt = agent.name + ' 프로필 사진';
+    photoWrap.appendChild(img);
+  } else {
+    // 이미지 없을 경우 placeholder 표시
+    photoWrap.innerHTML = `
+      <div class="hero-photo-placeholder">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="32" cy="24" r="14" fill="currentColor" opacity="0.5"/>
+          <path d="M6 58c0-14.36 11.64-26 26-26s26 11.64 26 26" stroke="currentColor" stroke-width="3" opacity="0.5" fill="none"/>
+        </svg>
+        <span>사진 없음</span>
+      </div>`;
+  }
+
+  /* ============================================================
+     섹션 3: 전문분야 렌더링
+  ============================================================ */
+  const grid = document.getElementById('specialty-grid');
+  data.specialties.forEach(sp => {
+    const card = document.createElement('div');
+    card.className = 'specialty-card';
+    card.innerHTML = `
+      <span class="specialty-icon">${sp.icon}</span>
+      <span class="specialty-name">${sp.name}</span>`;
+    grid.appendChild(card);
+  });
+
+  /* ============================================================
+     섹션 4: 블로그 포스트 렌더링 (더보기 기능 포함)
+  ============================================================ */
+  document.getElementById('blog-title').textContent =
+    agent.name + ' ' + agent.title + '의 블로그 🙄';
+
+  const posts = data.blog.posts;
+  const initialCount = data.blog.initialCount || 10;
+  const blogList = document.getElementById('blog-list');
+  const moreBtn = document.getElementById('blog-more-btn');
+  let blogShown = 0;
+
+  function renderBlogPosts(count) {
+    const end = Math.min(blogShown + count, posts.length);
+    for (let i = blogShown; i < end; i++) {
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <a class="blog-card" href="${posts[i].url}" target="_blank" rel="noopener">
+          <span class="blog-card-title">${posts[i].title}</span>
+          <span class="blog-card-arrow">›</span>
+        </a>`;
+      blogList.appendChild(li);
+    }
+    blogShown = end;
+    // 더보기 버튼 표시 여부
+    moreBtn.style.display = blogShown < posts.length ? 'block' : 'none';
+  }
+
+  renderBlogPosts(initialCount);
+  moreBtn.addEventListener('click', () => renderBlogPosts(initialCount));
+
+  /* ============================================================
+     섹션 5: 카드뉴스 캐러셀 렌더링
+  ============================================================ */
+  const track = document.getElementById('carousel-track');
+  const prefix = imgCfg.cardnewsPrefix;
+  const count = imgCfg.cardnewsCount;
+  const exts = imgCfg.cardnewsExts;
+
+  // 카드뉴스 이미지 자동 탐색 (card1 ~ cardN)
+  const cardPromises = [];
+  for (let i = 1; i <= count; i++) {
+    const names = exts.map(ext => prefix + i + ext);
+    cardPromises.push(findImage(imgCfg.folder, names));
+  }
+  const cardUrls = await Promise.all(cardPromises);
+
+  let hasAnyCard = false;
+  cardUrls.forEach((url, i) => {
+    const item = document.createElement('div');
+    item.className = 'carousel-item';
+    if (url) {
+      hasAnyCard = true;
+      const img = document.createElement('img');
+      img.className = 'carousel-img';
+      img.src = url;
+      img.alt = '카드뉴스 ' + (i + 1);
+      item.appendChild(img);
+    } else {
+      // 이미지 없을 경우 placeholder
+      item.innerHTML = `
+        <div class="carousel-placeholder">
+          <span style="font-size:1.6rem;">📷</span>
+          <span>card${i + 1}</span>
+        </div>`;
+    }
+    track.appendChild(item);
+  });
+
+  // 캐러셀 드래그 & 터치 스와이프
+  let isDragging = false, startX = 0, scrollLeft = 0;
+
+  track.addEventListener('mousedown', e => {
+    isDragging = true;
+    startX = e.pageX - track.offsetLeft;
+    scrollLeft = track.scrollLeft;
+    track.classList.add('grabbing');
+  });
+  document.addEventListener('mouseup', () => {
+    isDragging = false;
+    track.classList.remove('grabbing');
+  });
+  track.addEventListener('mousemove', e => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - track.offsetLeft;
+    track.scrollLeft = scrollLeft - (x - startX);
+  });
+
+  // 터치 지원
+  let touchStartX = 0, touchScrollLeft = 0;
+  track.addEventListener('touchstart', e => {
+    touchStartX = e.touches[0].clientX;
+    touchScrollLeft = track.scrollLeft;
+  }, { passive: true });
+  track.addEventListener('touchmove', e => {
+    const dx = touchStartX - e.touches[0].clientX;
+    track.scrollLeft = touchScrollLeft + dx;
+  }, { passive: true });
+
+  // 좌우 화살표 버튼
+  const itemWidth = 176; // 아이템 width + gap
+  document.getElementById('carousel-prev').addEventListener('click', () => {
+    track.scrollBy({ left: -itemWidth * 2, behavior: 'smooth' });
+  });
+  document.getElementById('carousel-next').addEventListener('click', () => {
+    track.scrollBy({ left: itemWidth * 2, behavior: 'smooth' });
+  });
+
+  // track에 overflow-x 스크롤 적용
+  track.style.overflowX = 'auto';
+  track.style.scrollbarWidth = 'none'; // Firefox
+  track.style.msOverflowStyle = 'none'; // IE
+  // WebKit 스크롤바 숨기기는 CSS로 처리 필요하나 JS에서 style 태그로 추가
+  const hideScrollStyle = document.createElement('style');
+  hideScrollStyle.textContent = '#carousel-track::-webkit-scrollbar { display: none; }';
+  document.head.appendChild(hideScrollStyle);
+
+  /* ============================================================
+     섹션 6: 데일리 뉴스 렌더링
+  ============================================================ */
+  const newsList = document.getElementById('news-list');
+  data.dailyNews.forEach(item => {
+    const li = document.createElement('li');
+    li.innerHTML = `
+      <a class="news-item" href="${item.url}" target="_blank" rel="noopener">
+        <span class="news-date">${item.date}</span>
+        <span class="news-title">${item.title}</span>
+      </a>`;
+    newsList.appendChild(li);
+  });
+
+  /* ============================================================
+     섹션 7: 플로팅 카카오 버튼
+  ============================================================ */
+  document.getElementById('float-kakao-btn').href = agent.kakaoLink;
+
+  /* ============================================================
+     섹션 8: 푸터 렌더링
+  ============================================================ */
+  document.getElementById('footer-name').textContent =
+    agent.name + ' ' + agent.title;
+  document.getElementById('footer-info').textContent =
+    agent.company + ' | ' + agent.phone;
+  document.getElementById('footer-copyright').textContent =
+    '© ' + new Date().getFullYear() + ' ' + agent.name + ' ' + agent.title + '. All rights reserved.';
+  document.getElementById('footer-disclaimer').textContent =
+    data.footer.disclaimer;
+
+  /* ============================================================
+     스크롤 페이드인 (Intersection Observer API)
+  ============================================================ */
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  fadeEls.forEach(el => observer.observe(el));
+
+})();
+</script>
+
+</body>
+</html>
