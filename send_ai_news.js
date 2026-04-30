@@ -1,53 +1,55 @@
 const https = require('https');
 
-const message = `## 📰 AI 주요 뉴스 요약 (2026년 4월 27일)
+const message = `## 📰 AI 주요 뉴스 요약 (2026년 4월 30일)
 
 ---
 
-**1️⃣ OpenAI·Microsoft 파트너십 전면 재편 — 독점 해제·멀티클라우드 시대 개막**
-OpenAI와 Microsoft가 기존 독점 계약을 수정, OpenAI가 Azure 외 모든 클라우드 제공업체에 제품을 제공할 수 있게 됐다. Microsoft는 2032년까지 OpenAI IP 라이선스를 유지하지만 독점권은 종료되며 수익 배분 상한액도 설정됐다. Amazon·Google 등과의 협력 확대가 본격화될 전망이다.
-• [🔗 Microsoft Blog](https://blogs.microsoft.com/blog/2026/04/27/the-next-phase-of-the-microsoft-openai-partnership/)
-• [🔗 CNBC](https://www.cnbc.com/2026/04/27/openai-microsoft-partnership-revenue-cap.html)
-• [🔗 OpenAI](https://openai.com/index/next-phase-of-microsoft-partnership/)
+**1️⃣ 빅테크 4사, 2026년 AI 인프라에 7천억 달러 투자 — 끝 모를 군비 경쟁**
+알파벳·아마존·메타·마이크로소프트 등 빅테크 4사가 2026년 AI 인프라에 합산 7천억 달러 이상을 지출할 것으로 전망된다. 1분기에만 약 1,300억 달러의 자본 지출이 이뤄졌으며, 데이터센터 구축이 주요 동력이다. 알파벳은 실적 호조로 10% 급등한 반면, 메타와 마이크로소프트는 AI 캐팩스 부담 우려로 각각 9%, 4% 하락했다.
+• [🔗 Fortune](https://fortune.com/2026/04/30/big-tech-hyperscalers-will-spend-700-billion-on-ai-infrastructure-this-year-with-no-clear-end-in-sight-eye-on-ai/)
+• [🔗 devFlokers](https://www.devflokers.com/blog/ai-news-last-24-hours-april-29-30-2026-roundup)
 
 ---
 
-**2️⃣ 중국, Meta의 AI 스타트업 Manus 20억 달러 인수 전격 차단**
-중국 국가발전개혁위원회(NDRC)가 Meta의 Manus AI 인수를 공식 금지했다. 수개월에 걸친 조사 끝에 내린 결정으로, 핵심 AI 기술의 미국 유출을 막으려는 의도로 풀이된다. Meta는 이미 임직원 합류와 자금 이전을 완료한 상태여서 계약 해소가 복잡해질 것으로 보인다.
-• [🔗 CNBC](https://www.cnbc.com/2026/04/27/meta-manus-china-blocks-acquisition-ai-startup.html)
-• [🔗 TechCrunch](https://techcrunch.com/2026/04/27/china-vetoes-metas-2b-manus-deal-after-months-long-probe/)
-• [🔗 Bloomberg](https://www.bloomberg.com/news/articles/2026-04-27/china-blocks-meta-s-2-billion-acquisition-of-ai-startup-manus)
+**2️⃣ Google Cloud, '에이전틱 엔터프라이즈' 시대 공식 선언**
+Google Cloud Next 2026에서 구글 클라우드 CEO 토마스 쿠리안이 AI를 '지능 시스템'에서 '행동 시스템'으로 전환하는 '에이전틱 엔터프라이즈' 전략을 공식 발표했다. Gemini Enterprise Agent Platform이 핵심 플랫폼으로, 기업 자동화 파이프라인을 본격 가동한다. Google AI Mode 일일 활성 사용자는 7,500만 명을 돌파했다.
+• [🔗 SiliconANGLE](https://siliconangle.com/2026/04/30/google-cloud-bets-big-agentic-enterprise-stack-googlecloudnext/)
 
 ---
 
-**3️⃣ OpenAI, GPT-6 공식 출시 — 200만 토큰·에이전트 작업 완료율 87%**
-OpenAI가 4월 14일 GPT-6(코드명 'Spud')를 전 세계에 출시했다. 200만 토큰 컨텍스트 윈도우를 갖추고 코딩·추론·에이전트 작업에서 GPT-5.4 대비 40% 이상 성능이 향상됐다. HumanEval 95% 이상, 에이전트 작업 완료율도 62%에서 87%로 대폭 향상됐다.
+**3️⃣ Meta, 신규 AI 모델 'Muse Spark' 공개**
+메타는 Meta Superintelligence Labs에서 개발한 첫 번째 'Muse' 시리즈 모델 'Muse Spark'(코드명 Avocado)를 출시했다. 140억 달러 규모의 Scale AI 딜 이후 메타의 첫 주요 AI 모델로, OpenAI와 Google의 독주를 견제하기 위한 전략적 시도로 평가된다.
+• [🔗 CNBC](https://www.cnbc.com/2026/04/08/meta-debuts-first-major-ai-model-since-14-billion-deal-to-bring-in-alexandr-wang.html)
+
+---
+
+**4️⃣ 4월 LLM 출시 역대 최다 — GPT-5 Turbo·Gemma 4·Qwen 3 등 9종 이상**
+2026년 4월은 LLM 역사상 한 달 내 가장 많은 주요 모델이 출시된 달로 기록됐다. OpenAI GPT-5 Turbo(텍스트·이미지·오디오 통합), Google Gemma 4(Apache 2.0 오픈소스), Alibaba Qwen 3 72B, Meta Llama 4 Maverick 등 6개 기관에서 9종 이상이 공개됐으며, Anthropic도 Claude Mythos를 선택 파트너에 프리뷰 제공 중이다.
 • [🔗 Fazm Blog](https://fazm.ai/blog/new-llm-releases-april-2026)
-• [🔗 llm-stats.com](https://llm-stats.com/ai-news)
+• [🔗 LLM Stats](https://llm-stats.com/ai-news)
 
 ---
 
-**4️⃣ Anthropic, Claude Mythos 프리뷰 한정 공개 — 사이버보안 특화 차세대 모델**
-Anthropic이 차세대 플래그십 Claude Mythos 프리뷰를 50개 파트너 기관에 한정 제공 중이다. Claude Opus 4.6 대비 한 단계 도약한 성능으로, 사이버보안 취약점 탐지·추론·코딩에 특화됐다. 가격은 입력 $25 / 출력 $125(백만 토큰당)이며 공개 출시 일정은 미정이다.
-• [🔗 Google Cloud Blog](https://cloud.google.com/blog/products/ai-machine-learning/claude-mythos-preview-on-vertex-ai)
-• [🔗 llm-stats.com](https://llm-stats.com/llm-updates)
+**5️⃣ 에이전틱 AI, 기업 도입률 79% 돌파 — 평균 ROI 171%**
+에이전틱 AI가 엔터프라이즈 생산 환경에서 주류로 자리잡아, 전 세계 기업의 79%가 AI 에이전트를 도입한 것으로 나타났다. 기업들은 평균 171%의 ROI를 보고하며, 2026년 말까지 기업 앱의 40%에 에이전트가 내장될 전망이다. Accenture·Deloitte·TCS 등 컨설팅 기업들도 에이전트 템플릿 프레임워크를 앞다퉈 출시하고 있다.
+• [🔗 FifthRow](https://www.fifthrow.com/blog/agentic-ai-s-enterprise-tipping-point-how-april-2026-redefined-systematic-innovation-and-production-scale-adoption)
+• [🔗 Switas Consultancy](https://www.switas.com/articles/the-agentic-ai-revolution-7-breakthroughs-reshaping-tech-in-april-2026)
 
 ---
 
-**5️⃣ 2026년 4월, LLM 역사상 최다 출시 기록 경신**
-4월 한 달간 Qwen 3, Llama 4 Scout·Maverick, Mistral Medium 3, Gemma 4(Apache 2.0), GLM-5.1(744B MoE) 등 6개 기관에서 9종 이상의 주요 모델이 출시됐다. 오픈소스와 독점 모델 간 성능 격차가 빠르게 줄고 멀티모달 기능이 사실상 표준이 되고 있다.
-• [🔗 Fazm Blog](https://fazm.ai/blog/llm-releases-april-2026)
-• [🔗 llm-stats.com](https://llm-stats.com/ai-news)
+**6️⃣ 삼성전자, AI 반도체 수요에 1분기 영업이익 756% 폭증**
+삼성전자는 AI 반도체 수요 급증에 힘입어 2026년 1분기 영업이익이 전년 동기 대비 756% 증가한 57.2조 원을 기록, 분기 역대 최대 실적을 달성했다. 매출 133.9조 원(+69%)을 기록하며 주가도 장중 23만 원을 돌파했다.
+• [🔗 위키트리](https://www.wikitree.co.kr/articles/1134409)
 
 ---
 
-**6️⃣ 알리바바, AI 비디오 생성 모델 HappyHorse API 상용화**
-알리바바가 HappyHorse API를 알리바바 클라우드 바이리엔(百炼) 플랫폼에서 정식 출시했다. Artificial Analysis의 Video Arena에서 텍스트-이미지·이미지-이미지 변환 부문 모두 1위를 차지했으며, 10% 할인된 가격으로 기업 고객에게 제공된다.
-• [🔗 Apiyi.com Blog](https://help.apiyi.com/ko/happyhorse-api-bailian-launch-apiyi-ko.html)
+**7️⃣ "AI는 이해가 아닌 암기만 한다" — 인지능력 논쟁 재점화**
+인간의 160가지 인지 과제를 모방한다고 주장한 AI 모델 'Centaur'에 대해 실제로는 패턴 암기에 불과하다는 새로운 연구가 발표됐다. AI 모델의 '진정한 이해' 여부에 관한 학계 논쟁이 재점화되며, 벤치마크 평가 방법론에 대한 비판적 검토가 요청되고 있다.
+• [🔗 ScienceDaily](https://www.sciencedaily.com/releases/2026/04/260429102035.htm)
 
 ---
 
-*출처: Microsoft Blog, CNBC, TechCrunch, Bloomberg, Fazm Blog, llm-stats.com, Google Cloud Blog, Apiyi.com*`;
+*출처: Fortune, SiliconANGLE, CNBC, Fazm Blog, LLM Stats, FifthRow, Switas Consultancy, 위키트리, ScienceDaily*`;
 
 const body = JSON.stringify({ text: message });
 
