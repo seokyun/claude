@@ -1,54 +1,56 @@
 const https = require('https');
 
-const message = `## 📰 AI 주요 뉴스 요약 (2026년 5월 6일)
+const message = `## 📰 AI 주요 뉴스 요약 (2026년 5월 8일)
 
 ---
 
-**1️⃣ OpenAI, GPT-5.5 Instant를 ChatGPT 기본 모델로 배포**
-OpenAI가 5월 5일 GPT-5.5 Instant를 ChatGPT의 새 기본 모델로 출시했습니다. 법률·의료·금융 등 고위험 분야에서의 환각(Hallucination)을 줄이는 기술을 중점 적용하면서, 낮은 응답 지연 시간을 유지하는 것이 특징입니다. 기존 GPT-5.3 Instant를 대체하며 전체 ChatGPT 사용자에게 순차 적용됩니다.
-• [🔗 LLM Stats - AI News](https://llm-stats.com/ai-news)
+**1️⃣ Anthropic, Akamai와 18억 달러 컴퓨팅 계약 + SpaceX 데이터센터 파트너십**
+Anthropic이 클라우드 기업 Akamai와 18억 달러(약 2.5조 원) 규모의 컴퓨팅 공급 계약을 체결했습니다. 동시에 SpaceX의 Colossus 1 데이터센터 전체 용량(300MW 이상, GPU 22만+ 개)을 활용하는 협약도 맺었습니다. Anthropic은 단 한 분기 만에 매출이 80배 증가한 것으로 전해집니다.
+• [🔗 Bloomberg](https://www.bloomberg.com/news/articles/2026-05-08/anthropic-inks-1-8-billion-computing-deal-with-akamai)
+• [🔗 Fortune](https://fortune.com/2026/05/08/anthropic-80fold-growth-quarter-renting-elon-musk-data-center/)
 
 ---
 
-**2️⃣ NASA 퍼서비어런스, 최초로 AI가 계획한 화성 탐사 주행 성공**
-NASA의 퍼서비어런스 로버가 Anthropic의 Claude 비전-언어 모델을 활용해 궤도 이미지와 지형 데이터를 분석, 인류 역사상 최초로 AI가 계획한 화성 주행을 성공적으로 완수했습니다. 이는 행성 탐사에서 AI 자율 제어가 실질적으로 활용된 새로운 이정표로 평가받고 있습니다.
-• [🔗 Crescendo AI News](https://www.crescendo.ai/news/latest-ai-news-and-updates)
+**2️⃣ Anthropic, 500억 달러 펀딩 추진 · 기업가치 1조 달러 근접**
+Anthropic이 이번 여름 약 500억 달러(약 70조 원) 규모의 신규 투자 유치를 검토 중이며, 기업가치가 1조 달러에 육박할 것으로 예상됩니다. Blackstone, Hellman & Friedman, Goldman Sachs 지원 아래 금융·의료·제조 등 중견기업 대상 엔터프라이즈 AI 서비스 회사도 신설 예정입니다.
+• [🔗 TechFundingNews](https://techfundingnews.com/anthropic-nears-1t-valuation-as-claude-gains-ground-in-enterprise-race-with-openai/)
+• [🔗 Solutions Review](https://solutionsreview.com/ai-news-for-the-week-of-may-8-updates-from-anthropic-cribl-ibm-more/)
 
 ---
 
-**3️⃣ IBM·RIKEN·클리브랜드 클리닉, 양자컴퓨터로 1만 2천 원자 단백질 시뮬레이션 성공**
-IBM, 일본 이화학연구소(RIKEN), 클리브랜드 클리닉이 양자 시스템과 일본 슈퍼컴퓨터를 연결해 12,000개 이상의 원자로 구성된 생물학적 단백질 복합체 시뮬레이션에 성공했습니다. 양자 우위를 주장하진 않았으나, 향후 신약 개발 분야 활용 가능성을 열었다는 평가를 받고 있습니다.
-• [🔗 Tech Startups](https://techstartups.com/2026/05/06/top-tech-news-today-may-6-2026/)
+**3️⃣ OpenAI, GPT-5.5 Instant 출시 및 1,220억 달러 자금 조달 완료**
+OpenAI가 GPT-5.5 Instant를 포함한 신규 음성 AI 모델과 API 업데이트를 공개했습니다. Amazon, Nvidia, SoftBank, Microsoft 등이 참여한 8,520억 달러 기업가치 기준으로 1,220억 달러 규모의 자금 조달도 완료한 것으로 알려졌습니다.
+• [🔗 OpenAI News](https://openai.com/news/)
+• [🔗 LLM Stats](https://llm-stats.com/llm-updates)
 
 ---
 
-**4️⃣ Google, 오픈소스 AI 모델 Gemma 4 공개 — 에이전틱 추론 특화**
-Google이 고급 추론 및 에이전틱 워크플로우에 특화된 새 오픈소스 AI 모델 시리즈 Gemma 4를 Apache 2.0 라이선스로 출시했습니다. 오픈소스 AI 경쟁이 한층 치열해질 전망이며, Llama·Mistral 등 기존 오픈소스 모델들과 벤치마크 경쟁이 기대됩니다.
-• [🔗 LLM Stats - LLM Updates](https://llm-stats.com/llm-updates)
-• [🔗 Crescendo AI Breakthroughs](https://www.crescendo.ai/news/latest-ai-news-and-updates)
+**4️⃣ 중국 AI 4사, 오픈소스 코딩 LLM 잇따라 공개**
+12일 사이에 Z.ai(GLM-5.1), MiniMax(M2.7), Moonshot(Kimi K2.6), DeepSeek(V4) 등 중국 4개 AI 기업이 오픈웨이트 코딩 특화 모델을 연이어 출시했습니다. 이들 모델 가격은 Claude Opus 4.7의 3분의 1 이하로, 고성능 모델의 접근성을 크게 높였다는 평가를 받고 있습니다.
+• [🔗 Air Street Press - State of AI May 2026](https://press.airstreet.com/p/state-of-ai-may-2026)
 
 ---
 
-**5️⃣ AMD CEO "에이전틱 AI 수요 폭발"…나스닥 신고가 경신**
-AMD의 리사 수 CEO가 에이전틱 AI의 급성장으로 CPU 수요가 폭발적으로 증가했다며 실적 전망을 대폭 상향 조정했습니다. 나스닥은 2% 이상 상승하며 25,838 신고가를 기록했고, AI 데이터센터 관련주 Super Micro Computer도 하루 만에 24.5% 급등했습니다.
-• [🔗 CNBC](https://www.cnbc.com/2026/05/05/stock-market-today-live-updates.html)
-• [🔗 Motley Fool](https://www.fool.com/coverage/stock-market-today/2026/05/06/stock-market-today-may-6-super-micro-computer-surges-after-earnings-beat-and-strong-ai-data-center-demand/)
+**5️⃣ 미국 정부, Google·Microsoft·xAI AI 모델 공개 전 사전 심사 협약**
+미국 상무부 산하 CAISI가 Google DeepMind, Microsoft, xAI와 AI 모델 공개 전 정부 사전 평가 협약을 체결했습니다. 기존 OpenAI·Anthropic과의 협약을 갱신한 이번 조치는 트럼프 행정부의 AI 감독 강화 기조를 반영합니다.
+• [🔗 CNBC](https://www.cnbc.com/2026/05/05/ai-oversight-trump-google-microsoft-xai.html)
+• [🔗 The Hill](https://thehill.com/homenews/5863937-google-microsoft-xai-ai-testing/)
 
 ---
 
-**6️⃣ G7, 'AI 책임 혁신 허브' 출범 추진…한국 스타트업도 참여 기회**
-G7이 AI의 책임 있는 혁신을 지원하는 'AI 책임 혁신 허브(AI Responsible Innovation Hub)' 출범을 구상 중입니다. 한국 스타트업도 국제 AI 표준 수립에 참여할 기회가 생길 전망이며, AI 거버넌스 분야에서 한국의 글로벌 입지 강화가 기대됩니다.
-• [🔗 아이티인사이트](https://www.itinsight.kr/news/456468)
+**6️⃣ Anthropic, AI 내부 작동을 자연어로 설명하는 NLA 기술 공개**
+Anthropic이 AI 모델의 내부 활성화(activations)를 사람이 읽을 수 있는 자연어 텍스트로 직접 변환하는 'Natural Language Autoencoders(NLA)' 기술을 발표했습니다. AI 해석 가능성(interpretability) 연구의 새로운 이정표로 평가받고 있습니다.
+• [🔗 MarkTechPost](https://www.marktechpost.com/2026/05/08/anthropic-introduces-natural-language-autoencoders-that-convert-claudes-internal-activations-directly-into-human-readable-text-explanations/)
 
 ---
 
-**7️⃣ Anthropic, 데스크톱-스마트폰 연속 대화 'OpenClaw' 기능 공개**
-Anthropic이 데스크톱 Claude와 스마트폰 간 지속적인 대화를 가능하게 하는 'OpenClaw' 기능을 선보였습니다. Meta도 유사한 크로스디바이스 AI 에이전트 'Hatch'와 인스타그램용 에이전틱 쇼핑 도구를 개발 중으로 알려져, 크로스디바이스 AI 에이전트 경쟁이 본격화되고 있습니다.
-• [🔗 The Decoder](https://the-decoder.com/google-and-meta-race-to-build-personal-ai-agents-as-anthropic-and-openai-pull-further-ahead/)
+**7️⃣ Cloudflare, 글로벌 네트워크 기반 LLM 고성능 인프라 발표**
+Cloudflare가 전 세계 네트워크에서 LLM을 실행하기 위한 새로운 고성능 인프라를 공개했습니다. 모델의 입력 처리와 출력 생성을 분리된 최적화 시스템으로 운영하고, 맞춤형 추론 엔진으로 GPU를 효율적으로 관리하는 방식이 특징입니다.
+• [🔗 InfoQ](https://www.infoq.com/news/2026/05/cloudflare-llm-infrastructure/)
 
 ---
 
-*출처: LLM Stats, Crescendo AI, Tech Startups, CNBC, Motley Fool, 아이티인사이트, The Decoder*`;
+*출처: Bloomberg, Fortune, TechFundingNews, Solutions Review, OpenAI, LLM Stats, Air Street Press, CNBC, The Hill, MarkTechPost, InfoQ*`;
 
 const body = JSON.stringify({ text: message });
 
