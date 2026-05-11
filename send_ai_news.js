@@ -1,56 +1,55 @@
 const https = require('https');
 
-const message = `## 📰 AI 주요 뉴스 요약 (2026년 5월 8일)
+const message = `## 📰 AI 주요 뉴스 요약 (2026년 5월 11일)
 
 ---
 
-**1️⃣ Anthropic, Akamai와 18억 달러 컴퓨팅 계약 + SpaceX 데이터센터 파트너십**
-Anthropic이 클라우드 기업 Akamai와 18억 달러(약 2.5조 원) 규모의 컴퓨팅 공급 계약을 체결했습니다. 동시에 SpaceX의 Colossus 1 데이터센터 전체 용량(300MW 이상, GPU 22만+ 개)을 활용하는 협약도 맺었습니다. Anthropic은 단 한 분기 만에 매출이 80배 증가한 것으로 전해집니다.
-• [🔗 Bloomberg](https://www.bloomberg.com/news/articles/2026-05-08/anthropic-inks-1-8-billion-computing-deal-with-akamai)
-• [🔗 Fortune](https://fortune.com/2026/05/08/anthropic-80fold-growth-quarter-renting-elon-musk-data-center/)
-
----
-
-**2️⃣ Anthropic, 500억 달러 펀딩 추진 · 기업가치 1조 달러 근접**
-Anthropic이 이번 여름 약 500억 달러(약 70조 원) 규모의 신규 투자 유치를 검토 중이며, 기업가치가 1조 달러에 육박할 것으로 예상됩니다. Blackstone, Hellman & Friedman, Goldman Sachs 지원 아래 금융·의료·제조 등 중견기업 대상 엔터프라이즈 AI 서비스 회사도 신설 예정입니다.
-• [🔗 TechFundingNews](https://techfundingnews.com/anthropic-nears-1t-valuation-as-claude-gains-ground-in-enterprise-race-with-openai/)
-• [🔗 Solutions Review](https://solutionsreview.com/ai-news-for-the-week-of-may-8-updates-from-anthropic-cribl-ibm-more/)
-
----
-
-**3️⃣ OpenAI, GPT-5.5 Instant 출시 및 1,220억 달러 자금 조달 완료**
-OpenAI가 GPT-5.5 Instant를 포함한 신규 음성 AI 모델과 API 업데이트를 공개했습니다. Amazon, Nvidia, SoftBank, Microsoft 등이 참여한 8,520억 달러 기업가치 기준으로 1,220억 달러 규모의 자금 조달도 완료한 것으로 알려졌습니다.
+**1️⃣ OpenAI, 기업용 AI 구축 전문 'OpenAI Deployment Company' 공식 출범**
+OpenAI가 기업들이 AI를 중심으로 비즈니스를 구축할 수 있도록 지원하는 'OpenAI Deployment Company'를 공식 출범했습니다. 19개 투자사로부터 100억 달러 기업가치 기준 40억 달러를 조달한 별도 엔터프라이즈 합작법인입니다.
 • [🔗 OpenAI News](https://openai.com/news/)
-• [🔗 LLM Stats](https://llm-stats.com/llm-updates)
+• [🔗 TechCrunch](https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/)
 
 ---
 
-**4️⃣ 중국 AI 4사, 오픈소스 코딩 LLM 잇따라 공개**
-12일 사이에 Z.ai(GLM-5.1), MiniMax(M2.7), Moonshot(Kimi K2.6), DeepSeek(V4) 등 중국 4개 AI 기업이 오픈웨이트 코딩 특화 모델을 연이어 출시했습니다. 이들 모델 가격은 Claude Opus 4.7의 3분의 1 이하로, 고성능 모델의 접근성을 크게 높였다는 평가를 받고 있습니다.
-• [🔗 Air Street Press - State of AI May 2026](https://press.airstreet.com/p/state-of-ai-may-2026)
+**2️⃣ Anthropic, Google·Broadcom과 대규모 컴퓨트 인프라 파트너십 체결**
+Anthropic이 Google 및 Broadcom과 역대 최대 규모의 컴퓨트 파트너십을 체결해 AI 인프라를 대폭 확장한다고 발표했습니다. Anthropic의 연간 반복 매출(ARR)은 300억 달러를 돌파해 2025년 말 대비 3배 이상 성장했습니다.
+• [🔗 Anthropic](https://www.anthropic.com/news/google-broadcom-partnership-compute)
 
 ---
 
-**5️⃣ 미국 정부, Google·Microsoft·xAI AI 모델 공개 전 사전 심사 협약**
-미국 상무부 산하 CAISI가 Google DeepMind, Microsoft, xAI와 AI 모델 공개 전 정부 사전 평가 협약을 체결했습니다. 기존 OpenAI·Anthropic과의 협약을 갱신한 이번 조치는 트럼프 행정부의 AI 감독 강화 기조를 반영합니다.
+**3️⃣ 중국 AI 4개 랩, 12일 새 오픈웨이트 코딩 모델 잇따라 공개**
+Z.ai의 GLM-5.1, MiniMax M2.7, Moonshot의 Kimi K2.6, DeepSeek V4 등 중국 AI 4개 랩이 단 12일 사이에 오픈웨이트 코딩 모델을 연속 출시했습니다. 모두 Claude Opus 4.7 대비 3분의 1 이하의 비용으로 이용 가능해 경쟁 구도를 크게 뒤흔들고 있습니다.
+• [🔗 LLM Stats](https://llm-stats.com/ai-news)
+• [🔗 Air Street Press](https://press.airstreet.com/p/state-of-ai-may-2026)
+
+---
+
+**4️⃣ 미국 정부, Microsoft·Google·xAI AI 모델 사전 평가 협약 체결**
+미국 상무부 산하 AI표준혁신센터(CAISI)가 Google DeepMind, Microsoft, xAI와 AI 모델 출시 전 사전 평가를 실시하는 협약을 체결했습니다. 기존 OpenAI·Anthropic 협약을 갱신한 이번 조치는 트럼프 행정부의 AI 거버넌스 강화 기조를 반영합니다.
+• [🔗 CNN Business](https://www.cnn.com/2026/05/05/tech/microsoft-google-xai-government-test-ai-models)
 • [🔗 CNBC](https://www.cnbc.com/2026/05/05/ai-oversight-trump-google-microsoft-xai.html)
-• [🔗 The Hill](https://thehill.com/homenews/5863937-google-microsoft-xai-ai-testing/)
 
 ---
 
-**6️⃣ Anthropic, AI 내부 작동을 자연어로 설명하는 NLA 기술 공개**
-Anthropic이 AI 모델의 내부 활성화(activations)를 사람이 읽을 수 있는 자연어 텍스트로 직접 변환하는 'Natural Language Autoencoders(NLA)' 기술을 발표했습니다. AI 해석 가능성(interpretability) 연구의 새로운 이정표로 평가받고 있습니다.
-• [🔗 MarkTechPost](https://www.marktechpost.com/2026/05/08/anthropic-introduces-natural-language-autoencoders-that-convert-claudes-internal-activations-directly-into-human-readable-text-explanations/)
-
----
-
-**7️⃣ Cloudflare, 글로벌 네트워크 기반 LLM 고성능 인프라 발표**
-Cloudflare가 전 세계 네트워크에서 LLM을 실행하기 위한 새로운 고성능 인프라를 공개했습니다. 모델의 입력 처리와 출력 생성을 분리된 최적화 시스템으로 운영하고, 맞춤형 추론 엔진으로 GPU를 효율적으로 관리하는 방식이 특징입니다.
+**5️⃣ Cloudflare, 글로벌 네트워크 기반 LLM 고성능 추론 인프라 공개**
+Cloudflare가 전 세계 네트워크에서 대형 AI 언어 모델을 실행할 수 있는 새로운 인프라를 발표했습니다. 입력 처리와 출력 생성을 별도의 최적화 시스템으로 분리해 추론 성능과 비용 효율성을 동시에 높인 것이 특징입니다.
 • [🔗 InfoQ](https://www.infoq.com/news/2026/05/cloudflare-llm-infrastructure/)
 
 ---
 
-*출처: Bloomberg, Fortune, TechFundingNews, Solutions Review, OpenAI, LLM Stats, Air Street Press, CNBC, The Hill, MarkTechPost, InfoQ*`;
+**6️⃣ 업스테이지, 포털 '다음' 인수 확정…한국형 AI 검색 생태계 구축 선언**
+국내 AI 스타트업 업스테이지가 포털 다음 운영사 AXZ 인수를 최종 확정했습니다. 자체 개발 LLM '솔라'를 다음에 접목해 네이버·구글에 맞서는 AI 검색 포털로 재탄생시킬 계획으로, 국내 AI 생태계의 판도 변화가 예상됩니다.
+• [🔗 Aboda](https://aboda.kr/entry/%EC%97%85%EC%8A%A4%ED%85%8C%EC%9D%B4%EC%A7%80-%EB%8B%A4%EC%9D%8C-%EC%9D%B8%EC%88%98)
+
+---
+
+**7️⃣ SI 업계, AI·클라우드 바람 타고 1분기 호실적 달성**
+CJ올리브네트웍스 등 국내 시스템통합(SI) 업체들이 AI·클라우드 수요 급증에 힘입어 1분기 두 자릿수 매출 성장과 수익성 개선을 동시에 달성했습니다. CJ올리브네트웍스는 매출 2,118억원(+12.1%), 영업이익(+31.4%)을 기록했습니다.
+• [🔗 뉴스핌](https://www.newspim.com/news/view/20260511001205)
+
+---
+
+*출처: OpenAI, TechCrunch, Anthropic, LLM Stats, Air Street Press, CNN Business, CNBC, InfoQ, Aboda, 뉴스핌*`;
 
 const body = JSON.stringify({ text: message });
 
