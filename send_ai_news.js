@@ -1,55 +1,55 @@
 const https = require('https');
 
-const message = `## 📰 AI 주요 뉴스 요약 (2026년 5월 11일)
+const message = `## 📰 AI 주요 뉴스 요약 (2026년 5월 13일)
 
 ---
 
-**1️⃣ OpenAI, 기업용 AI 구축 전문 'OpenAI Deployment Company' 공식 출범**
-OpenAI가 기업들이 AI를 중심으로 비즈니스를 구축할 수 있도록 지원하는 'OpenAI Deployment Company'를 공식 출범했습니다. 19개 투자사로부터 100억 달러 기업가치 기준 40억 달러를 조달한 별도 엔터프라이즈 합작법인입니다.
-• [🔗 OpenAI News](https://openai.com/news/)
-• [🔗 TechCrunch](https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/)
+**1️⃣ Google·SpaceX, 우주 오비털 AI 데이터센터 구축 논의**
+Google이 SpaceX와 협력해 AI 처리용 위성을 구도에 발사하는 오비털 데이터센터 구축을 협의 중입니다. Google의 '프로젝트 선캐처' 일환으로, Google Tensor Processing Unit(AI 칩)을 탑재한 위성을 2027년부터 발사할 계획입니다. SpaceX는 FCC에 최대 100만 기 위성으로 구성된 AI 우주 인프라 네트워크 구축을 신청한 상태입니다.
+• [🔗 TechCrunch](https://techcrunch.com/2026/05/12/report-google-and-spacex-in-talks-to-put-data-centers-into-orbit/)
+• [🔗 Bloomberg](https://www.bloomberg.com/news/articles/2026-05-12/google-in-talks-to-use-spacex-to-launch-space-data-centers-wsj)
 
 ---
 
-**2️⃣ Anthropic, Google·Broadcom과 대규모 컴퓨트 인프라 파트너십 체결**
-Anthropic이 Google 및 Broadcom과 역대 최대 규모의 컴퓨트 파트너십을 체결해 AI 인프라를 대폭 확장한다고 발표했습니다. Anthropic의 연간 반복 매출(ARR)은 300억 달러를 돌파해 2025년 말 대비 3배 이상 성장했습니다.
-• [🔗 Anthropic](https://www.anthropic.com/news/google-broadcom-partnership-compute)
+**2️⃣ AWS Kiro, 에이전트 개발 플랫폼 3가지 신기능 추가**
+AWS가 자사 에이전트 IDE 플랫폼 Kiro에 세 가지 기능을 추가했습니다: ① 병렬 태스크 실행(Parallel Task Execution), ② 한 번에 요구사항·설계·작업 목록을 생성하는 Quick Plan, ③ 코드 작성 전 요구사항의 비일관성을 찾는 Requirements Analysis(신경기호학적 AI 활용). 프롬프트를 자동으로 사양서로 변환하고, 작동 코드·문서·테스트까지 생성해주는 통합 개발 에이전트 플랫폼입니다.
+• [🔗 SD Times](https://sdtimes.com/ai/news-roundup-may-13-2026-aws-kiro-uipath-signadot/)
+• [🔗 SiliconANGLE](https://siliconangle.com/2026/05/12/aws-kiro-accelerates-software-development-proving-code-correctness-gets-work/)
 
 ---
 
-**3️⃣ 중국 AI 4개 랩, 12일 새 오픈웨이트 코딩 모델 잇따라 공개**
-Z.ai의 GLM-5.1, MiniMax M2.7, Moonshot의 Kimi K2.6, DeepSeek V4 등 중국 AI 4개 랩이 단 12일 사이에 오픈웨이트 코딩 모델을 연속 출시했습니다. 모두 Claude Opus 4.7 대비 3분의 1 이하의 비용으로 이용 가능해 경쟁 구도를 크게 뒤흔들고 있습니다.
+**3️⃣ Palo Alto 경고: AI 주도 사이버 공격, 몇 달 안에 '일반화'될 것**
+Palo Alto Networks의 기술 책임자 Lee Klarich가 3~5개월 안에 AI 주도 사이버 공격이 '새로운 표준'이 될 것이라 경고했습니다. Anthropic Mythos, OpenAI GPT-5.5-Cyber 등 신규 AI 모델이 미알려진 소프트웨어 취약점 발견 및 익스플로잇 생성을 빠르게 하고 있어 기업들의 시급한 대비가 필요합니다.
+• [🔗 CNBC](https://www.cnbc.com/2026/05/13/palo-alto-ai-cyberattacks-mythos-gpt.html)
+
+---
+
+**4️⃣ 알리바바, 순익 감소에도 AI · 클라우드 투자 기조 유지**
+알리바바가 순익 감소에도 AI 반도체 및 데이터센터 투자, Qwen 모델 시리즈 개발 등에 적극적인 입장을 유지하고 있습니다. 클라우드 컴퓨팅 부문에서 AI 투자가 확실한 수익으로 연결되면서 투자자들에게 긴긴한 반응을 얻고 있습니다.
+• [🔗 CNBC](https://www.cnbc.com/2026/05/13/alibaba-earnings-march-quarter-ai-cloud-growth.html)
+
+---
+
+**5️⃣ OpenAI GPT-5.5 출시 — 역대 최강 에이전트 기능 탑재**
+OpenAI가 4월 23일 GPT-5.5 및 GPT-5.5 Pro(병렬 컴퓨트 부스트 버전)를 출시했습니다. 기업 지식 업무·코딩 자동화를 타겟으로 역대 최강의 에이전트 기능이 탑재되었습니다. Anthropic 역시 Claude Opus 4.6·Sonnet 4.6·Haiku 4.5를 정식 릴리즈하며 LLM 경쟁이 고조되고 있습니다.
 • [🔗 LLM Stats](https://llm-stats.com/ai-news)
-• [🔗 Air Street Press](https://press.airstreet.com/p/state-of-ai-may-2026)
+• [🔗 AI Flash Report](https://aiflashreport.com/model-releases.html)
 
 ---
 
-**4️⃣ 미국 정부, Microsoft·Google·xAI AI 모델 사전 평가 협약 체결**
-미국 상무부 산하 AI표준혁신센터(CAISI)가 Google DeepMind, Microsoft, xAI와 AI 모델 출시 전 사전 평가를 실시하는 협약을 체결했습니다. 기존 OpenAI·Anthropic 협약을 갱신한 이번 조치는 트럼프 행정부의 AI 거버넌스 강화 기조를 반영합니다.
-• [🔗 CNN Business](https://www.cnn.com/2026/05/05/tech/microsoft-google-xai-government-test-ai-models)
-• [🔗 CNBC](https://www.cnbc.com/2026/05/05/ai-oversight-trump-google-microsoft-xai.html)
-
----
-
-**5️⃣ Cloudflare, 글로벌 네트워크 기반 LLM 고성능 추론 인프라 공개**
-Cloudflare가 전 세계 네트워크에서 대형 AI 언어 모델을 실행할 수 있는 새로운 인프라를 발표했습니다. 입력 처리와 출력 생성을 별도의 최적화 시스템으로 분리해 추론 성능과 비용 효율성을 동시에 높인 것이 특징입니다.
+**6️⃣ Cloudflare, 글로벌 LLM 실행 고성능 인프라 발표**
+Cloudflare가 전 세계 네트워크에서 대형 AI 언어 모델을 실행할 수 있는 새로운 인프라를 발표했습니다. 모델의 입력 처리와 출력 생성을 별도의 최적화 시스템으로 분리하여 추론 성능과 비용 효율성을 동시에 높인 것이 특징입니다.
 • [🔗 InfoQ](https://www.infoq.com/news/2026/05/cloudflare-llm-infrastructure/)
 
 ---
 
-**6️⃣ 업스테이지, 포털 '다음' 인수 확정…한국형 AI 검색 생태계 구축 선언**
-국내 AI 스타트업 업스테이지가 포털 다음 운영사 AXZ 인수를 최종 확정했습니다. 자체 개발 LLM '솔라'를 다음에 접목해 네이버·구글에 맞서는 AI 검색 포털로 재탄생시킬 계획으로, 국내 AI 생태계의 판도 변화가 예상됩니다.
-• [🔗 Aboda](https://aboda.kr/entry/%EC%97%85%EC%8A%A4%ED%85%8C%EC%9D%B4%EC%A7%80-%EB%8B%A4%EC%9D%8C-%EC%9D%B8%EC%88%98)
+**7️⃣ 미 의회, 대중국 AI 반도체 수출통제 강화 법안 추진**
+미국 의회가 중국에 대한 AI 반도체 수출통제를 더욱 강화하는 법안을 추진 중입니다. 한국 반도체 기업 등 관련 업체들의 신속한 대응이 요구됩니다. 미중 기술 패권이 글로벌 AI 공급망에 미치는 영향력이 확대되고 있습니다.
+• [🔗 전국인력신문](https://www.kjob.news/news/487805)
 
 ---
 
-**7️⃣ SI 업계, AI·클라우드 바람 타고 1분기 호실적 달성**
-CJ올리브네트웍스 등 국내 시스템통합(SI) 업체들이 AI·클라우드 수요 급증에 힘입어 1분기 두 자릿수 매출 성장과 수익성 개선을 동시에 달성했습니다. CJ올리브네트웍스는 매출 2,118억원(+12.1%), 영업이익(+31.4%)을 기록했습니다.
-• [🔗 뉴스핌](https://www.newspim.com/news/view/20260511001205)
-
----
-
-*출처: OpenAI, TechCrunch, Anthropic, LLM Stats, Air Street Press, CNN Business, CNBC, InfoQ, Aboda, 뉴스핌*`;
+*출처: TechCrunch, Bloomberg, CNBC, SD Times, SiliconANGLE, InfoQ, LLM Stats, AI Flash Report, 전국인력신문*`;
 
 const body = JSON.stringify({ text: message });
 
