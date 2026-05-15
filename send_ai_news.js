@@ -1,50 +1,52 @@
 const https = require('https');
 
-const message = `## 📰 AI 주요 뉴스 요약 (2026년 5월 14일)
+const message = `## 📰 AI 주요 뉴스 요약 (2026년 5월 15일)
 
 ---
 
-**1️⃣ Cerebras, 55억 달러 IPO로 나스닥 데뷔… 주가 ~100% 폭등**
-AI 전용 칩 제조사 Cerebras Systems가 55억 5,000만 달러 규모의 IPO를 성공적으로 마무리하며 나스닥에 상장됐습니다. 공모가 185달러에서 시작해 장중 90~100%까지 폭등하며 시가총액 약 950억 달러를 기록, 2026년 최대 기술 IPO로 등극했습니다. 엔비디아 GPU와 달리 단일 웨이퍼 기반 칩 설계로 AI 추론 속도와 비용 경쟁력을 강조합니다.
-• [🔗 CNBC](https://www.cnbc.com/2026/05/14/cerebras-cbrs-stock-trade-nasdaq-ipo.html)
-• [🔗 TechCrunch](https://techcrunch.com/2026/05/14/cerebras-raises-5-5b-kicking-off-2026s-ipo-season-with-a-bang/)
+**1️⃣ OpenAI · NVIDIA, 역대급 전략적 파트너십 체결 — $1,000억 투자·10GW 배포**
+OpenAI와 NVIDIA가 차세대 AI 인프라 구축을 위한 대규모 전략적 파트너십을 발표했습니다. NVIDIA는 OpenAI에 최대 $1,000억을 투자하며, 2026년 하반기부터 NVIDIA Vera Rubin 플랫폼 기반 10기가와트 규모 AI 시스템을 단계적으로 배포합니다. 수퍼인텔리전스 구현을 위한 인프라 투자로 업계의 이목이 집중되고 있습니다.
+• [🔗 NVIDIA Newsroom](https://nvidianews.nvidia.com/news/openai-and-nvidia-announce-strategic-partnership-to-deploy-10gw-of-nvidia-systems)
 
 ---
 
-**2️⃣ 미·중 정상회담에서 AI 안전 협의 출범 합의**
-트럼프-시진핑 베이징 정상회담(5월 14~15일)을 계기로 미국과 중국이 AI 안전 프로토콜 공식 협의를 시작하기로 합의했습니다. 미 재무장관 베센트는 "미국이 AI 분야에서 앞서 있기 때문에 협상 테이블에 나설 수 있다"고 밝혔으며, 양국은 첨단 AI 모델이 잘못된 곳에 유출되지 않도록 하는 국제 규범 마련을 논의할 예정입니다.
-• [🔗 CNBC](https://www.cnbc.com/2026/05/14/us-china-ai-rules-bessent-us-lead.html)
-• [🔗 Bloomberg](https://www.bloomberg.com/news/articles/2026-05-13/why-the-us-must-engage-china-on-ai-safety-before-it-s-game-over)
+**2️⃣ Cerebras, 나스닥 상장 첫날 70% 급등 — 기업가치 $950억 돌파**
+AI 추론 전용 반도체 스타트업 Cerebras가 나스닥에 상장하며 첫날 주가가 70% 급등하는 블록버스터 IPO를 기록했습니다. OpenAI와의 대형 파트너십이 투자자들의 높은 기대를 이끌었고, 기업가치는 $950억에 달했습니다. 웨이퍼 규모 AI 칩 시장의 새로운 국면을 알리는 사건으로 평가됩니다.
+• [🔗 Fortune](https://fortune.com/2026/05/15/cerebras-soars-almost-70-by-market-close-in-a-true-blockbuster-ipo/)
 
 ---
 
-**3️⃣ SubQ, 1,200만 토큰 컨텍스트 창 탑재 신규 LLM 출시**
-스타트업 Subquadratic이 2,900만 달러 시드 투자를 받아 'SubQ'를 출시했습니다. 표준 트랜스포머가 아닌 서브쿼드라틱 희소 어텐션 아키텍처를 채택해 기존 프런티어 모델 대비 약 1/5 비용, 최대 52배 빠른 긴 문맥 처리 속도를 자랑합니다. 1,200만 토큰 네이티브 컨텍스트 창을 지원하는 첫 상용 LLM입니다.
-• [🔗 LLM Stats](https://llm-stats.com/ai-news)
+**3️⃣ Anthropic, Claude Opus 4 공식 출시 — 역대 가장 강력한 Claude**
+Anthropic이 Claude 모델 패밀리 사상 가장 강력한 Claude Opus 4를 공식 출시했습니다. 실질적인 AI 에이전트 활용에 초점을 맞춘 이번 모델은 복잡한 멀티스텝 업무와 고난도 추론 작업에서 탁월한 성능을 발휘하며, Anthropic의 에이전트 중심 전략을 집약한 플래그십 모델입니다.
 • [🔗 WhatLLM](https://whatllm.org/blog/new-ai-models-may-2026)
 
 ---
 
-**4️⃣ Sakana AI, 실시간 지식 주입 음성-음성 AI 아키텍처 'KAME' 공개**
-일본 AI 연구소 Sakana AI가 KAME(Knowledge-Access Model Extension)를 발표했습니다. 직접 음성-음성 시스템의 초저지연을 유지하면서 백엔드 LLM의 풍부한 지식을 실시간으로 주입하는 하이브리드 아키텍처로, 기존 음성 AI의 지식 한계와 응답 지연 문제를 동시에 해결하는 새로운 접근 방식입니다.
-• [🔗 MarkTechPost](https://www.marktechpost.com/2026/05/03/sakana-ai-introduces-kame-a-tandem-speech-to-speech-architecture-that-injects-llm-knowledge-in-real-time/)
+**4️⃣ MiniMax M2.5 · M2.7 신규 모델군 일괄 출시 (5월 15일)**
+중국 AI 스타트업 MiniMax가 오늘 M2.5 Highspeed, M2.7 Highspeed, M2.7 등 3종 모델을 동시 출시했습니다. 빠른 추론 속도와 비용 효율성에 특화된 상용 모델로, 프론티어 모델 수준의 성능을 낮은 비용으로 제공한다는 점에서 주목받고 있습니다.
+• [🔗 LLM Stats](https://llm-stats.com/llm-updates)
 
 ---
 
-**5️⃣ 한국 ICT 수출 역대 최고… AI·반도체 수요 급증**
-한국의 2026년 4월 ICT 수출액이 427억 1,000만 달러로 전년 동기 대비 125.9% 증가하며 역대 최고치를 경신했습니다. AI 및 반도체 제품에 대한 글로벌 수요 급증이 주요 원인으로 분석되며, AI 벤처 업스테이지도 국가 AI컴퓨팅센터 연계 5,600억 원 투자 유치를 기록했습니다.
-• [🔗 AI타임스](https://www.aitimes.com/)
-• [🔗 인공지능신문](https://www.aitimes.kr/)
+**5️⃣ OpenAI, AI 기업 전문 자회사 'Deployment Company' 출범 · Tomoro 인수**
+OpenAI가 기업 AI 도입 가속화를 목표로 'OpenAI Deployment Company'를 $40억 초기 투자로 출범했습니다. 동시에 AI 컨설팅 업체 Tomoro를 인수해 150여 명의 AI 엔지니어를 확보하며 엔터프라이즈 고객 지원 역량을 대폭 강화합니다.
+• [🔗 OpenAI Blog](https://openai.com/index/openai-launches-the-deployment-company/)
 
 ---
 
-**6️⃣ Cloudflare, 글로벌 네트워크 기반 LLM 고성능 추론 인프라 발표**
-Cloudflare가 전 세계 네트워크에서 대형 AI 언어 모델을 실행할 수 있는 새 인프라를 발표했습니다. 모델의 입력 처리와 출력 생성을 최적화된 별도 시스템으로 분리하고, GPU를 효율적으로 관리하는 커스텀 추론 엔진을 적용해 AI 서비스의 성능과 비용 효율을 크게 높일 것으로 기대됩니다.
-• [🔗 InfoQ](https://www.infoq.com/news/2026/05/cloudflare-llm-infrastructure/)
+**6️⃣ GPT-5.5 Instant, ChatGPT 기본 모델로 적용 — 고위험 도메인 할루시네이션 감소**
+OpenAI의 경량 추론 모델 GPT-5.5 Instant가 5월 5일부터 ChatGPT 기본 모델로 채택됐습니다. 법률·의료·금융 등 고위험 분야에서 환각(hallucination)을 줄이고 응답 속도를 높인 것이 특징으로, 실용적인 ChatGPT 사용 환경을 한층 개선합니다.
+• [🔗 LLM Stats](https://llm-stats.com/ai-news)
 
 ---
 
-*출처: CNBC, TechCrunch, Bloomberg, LLM Stats, WhatLLM, MarkTechPost, AI타임스, InfoQ*`;
+**7️⃣ HubSpot, AI 답변 엔진 가시성 추적 대시보드 'AEO Sensor' 출시**
+HubSpot이 ChatGPT·Gemini·Perplexity 등 주요 AI 답변 엔진에서 자사 브랜드 언급도와 인용 패턴을 추적하는 공개 대시보드 'AEO Sensor'를 선보였습니다. AI가 검색을 대체하는 시대에 브랜드 노출 전략을 재정의하는 새로운 마케팅 도구로 평가됩니다.
+• [🔗 Marketing Profs](https://www.marketingprofs.com/opinions/2026/54786/ai-update-may-15-2026-ai-news-and-views-from-the-past-week)
+
+---
+
+*출처: NVIDIA Newsroom, Fortune, WhatLLM, LLM Stats, OpenAI Blog, Marketing Profs*`;
 
 const body = JSON.stringify({ text: message });
 
@@ -61,7 +63,7 @@ const options = {
 const req = https.request(options, (res) => {
   let data = '';
   res.on('data', (d) => {
-    data += d.toString();
+    data += d.toString('utf8');
     process.stdout.write(d);
   });
   res.on('end', () => {
