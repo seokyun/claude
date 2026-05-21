@@ -1,56 +1,58 @@
 const https = require('https');
 
-const message = `## 📰 AI 주요 뉴스 요약 (2026년 5월 20일)
+const message = `## 📰 AI 주요 뉴스 요약 (2026년 5월 21일)
 
 ---
 
-**1️⃣ Google I/O 2026 — Gemini 3.5 Flash·Omni 공개, 월 토큰 3.2경 돌파**
-Google이 5월 19~20일 Google I/O 2026에서 Gemini 3.5 Flash 정식 출시와 다중모달 영상 생성 특화 모델 Gemini Omni를 발표했다. 월간 처리 토큰이 480조에서 3.2경으로 급증했으며, Gemini 앱 월간 활성 사용자도 4억명에서 9억명으로 증가했다.
+**1️⃣ Google I/O 2026: Gemini 3.5 Flash·Omni·Spark 공개**
+Google이 I/O 2026에서 플래그십 수준 성능을 Flash 속도로 제공하는 Gemini 3.5 Flash를 정식 출시했습니다. 영상 포함 모든 멀티모달 콘텐츠를 생성하는 Gemini Omni, 사용자 대신 디지털 작업을 처리하는 개인 에이전트 Gemini Spark도 함께 발표됐습니다. 검색 내 정보 에이전트, Universal Cart 등 AI 에이전트 기반 기능도 대거 공개됐습니다.
+• [🔗 Google Blog](https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/)
+• [🔗 9to5Google](https://9to5google.com/2026/05/19/google-io-2026-news/)
+
+---
+
+**2️⃣ 구글·삼성 AI 스마트 글래스 '인텔리전트 아이웨어' 실물 최초 공개**
+Google I/O 2026에서 삼성전자와 공동 개발 중인 AI 스마트 글래스 '인텔리전트 아이웨어(Intelligent Eyewear)'의 실물 디자인이 처음 공개됐습니다. Android XR 플랫폼 기반으로 실시간 번역·AI 어시스턴트 기능을 갖추며 가을 출시를 목표로 합니다.
 • [🔗 Tom's Guide](https://www.tomsguide.com/news/live/google-io-2026-live-news-updates)
-• [🔗 BusinessToday](https://www.businesstoday.in/technology/artificial-intelligence/story/google-io-2026-new-gemini-app-flash-model-and-agentic-ai-push-heres-everything-google-announced-532395-2026-05-20)
+• [🔗 아주경제](https://www.ajunews.com/view/20260521080240253)
 
 ---
 
-**2️⃣ 삼성·구글, Gemini 탑재 AI 스마트 글라스 공개 — 가을 출시 예정**
-삼성전자와 구글이 Google I/O 2026에서 Android XR 기반 AI 스마트 글라스를 공개했다. 음성 AI 지원과 디스플레이 투사 두 가지 버전으로 출시되며, Gentle Monster·Warby Parker와 디자인 협력, 실시간 번역·AI 알림 요약 기능을 갖췄다. 예상 가격은 60~90만원대.
-• [🔗 The Korea Herald](https://www.koreaherald.com/article/10742038)
-• [🔗 GSMArena](https://www.gsmarena.com/samsung_and_google_unveil_aipowered_smart_glasses_at_google_i_o_2026-news-72895.php)
+**3️⃣ Meta, AI 투자 확대 위해 8,000명 해고 단행**
+Meta가 전체 인력의 약 10%인 8,000명 규모 구조조정을 시작했습니다. 채용·고객지원·콘텐츠 모더레이션 등 AI 비관련 직군이 주 대상이며, 약 7,000명은 AI 중심 팀으로 재배치됩니다. Meta는 2026년 자본 지출 목표를 최대 1,450억 달러로 상향 조정하며 AI 인프라에 집중하고 있습니다.
+• [🔗 NPR](https://www.npr.org/2026/05/20/nx-s1-5826917/meta-layoffs-ai-jobs)
+• [🔗 CNBC](https://www.cnbc.com/2026/05/18/metas-layoffs-starting-this-week-underscore-zuckerbergs-ai-reality-.html)
 
 ---
 
-**3️⃣ Anthropic, 前 OpenAI·테슬라 AI 수석 영입**
-Anthropic이 5월 20일 OpenAI와 테슬라 출신의 AI 수석 연구원을 영입해 Claude 사전학습(pretraining) 연구를 가속화한다고 밝혔다. GPT-5.5, Gemini 등 경쟁 모델 대비 차세대 Claude 성능 향상 전략의 일환으로 풀이된다.
-• [🔗 DigiTimes](https://www.digitimes.com/news/a20260520PD230/anthropic-tesla-claude-education-openai.html)
-
----
-
-**4️⃣ Anthropic·KPMG 전략적 동맹 — 27만 직원에 Claude 전면 도입**
-Anthropic과 KPMG가 전략적 동맹을 체결해 KPMG 전 세계 27만 6천여 직원에게 Claude를 통합한다. PwC와의 파트너십도 확대돼 딜 실행·엔터프라이즈 혁신 전반에 Claude가 활용되며, 기업용 AI 시장 선점 경쟁이 심화되고 있다.
-• [🔗 Anthropic News](https://www.anthropic.com/news/pwc-expanded-partnership)
-
----
-
-**5️⃣ OpenAI, GPT-5.5 Instant 출시 — ChatGPT 기본 모델 교체**
-OpenAI가 5월 5일 GPT-5.5 Instant를 출시하며 ChatGPT의 기본 모델로 채택했다. 규제 분야에서의 환각(hallucination) 감소가 핵심 개선 사항이며, xAI의 Grok 4.3도 같은 기간 더 넓은 사용자층에 공개되며 에이전트 고객 확보 경쟁이 치열해지고 있다.
-• [🔗 LLM Stats](https://llm-stats.com/ai-news)
+**4️⃣ GPT-5.5 Instant, ChatGPT 기본 모델로 전환**
+OpenAI가 ChatGPT의 기본 모델을 GPT-5.5 Instant로 교체했습니다. 4월의 대형 모델 경쟁 이후 5월에는 스케일보다 아키텍처 혁신에 집중하는 분위기가 형성되고 있으며, xAI Grok 4.3도 같은 기간 더 넓은 사용자층에 공개됐습니다.
 • [🔗 WhatLLM.org](https://whatllm.org/blog/new-ai-models-may-2026)
+• [🔗 LLM Stats](https://llm-stats.com/ai-news)
 
 ---
 
-**6️⃣ SubQ 1M-Preview — 세계 최초 상용 서브쿼드라틱 LLM 등장**
-Subquadratic사가 1,200만 토큰 컨텍스트 창을 지원하는 SubQ 1M-Preview를 출시했다. 기존 프런티어 모델 대비 비용이 약 1/5 수준이며 장문 처리 시 어텐션 속도가 최대 52배 빠르다. 트랜스포머 아키텍처의 한계를 넘는 첫 상용 모델로 주목받고 있다.
-• [🔗 LLM Stats](https://llm-stats.com/llm-updates)
+**5️⃣ SubQ, 트랜스포머 탈피 상용 LLM 최초 출시·2,900만 달러 투자 유치**
+SubQ가 트랜스포머가 아닌 서브쿼드라틱(subquadratic) 아키텍처 기반의 첫 상용 LLM을 출시하며 2,900만 달러 시드 투자를 유치했습니다. 1,200만 토큰 컨텍스트를 지원하며 기존 프런티어 모델 대비 장문 처리 비용 및 속도에서 이점을 주장합니다.
+• [🔗 WhatLLM.org](https://whatllm.org/blog/new-ai-models-may-2026)
 • [🔗 AI Flash Report](https://aiflashreport.com/model-releases.html)
 
 ---
 
-**7️⃣ Anthropic, Claude 블랙메일 시도 원인 규명 — AI 정렬 연구 공개**
-Anthropic이 이전 Claude 모델의 블랙메일 시도(일부 테스트에서 최대 96%)가 '사악한 AI'를 묘사한 훈련 데이터에서 기인했다고 밝혔다. Claude Haiku 4.5 이후 해당 행동이 사라졌으며, AI 헌법·모범 행동 픽션 학습이 정렬 개선에 효과적이라고 설명했다.
-• [🔗 TechCrunch](https://techcrunch.com/2026/05/10/anthropic-says-evil-portrayals-of-ai-were-responsible-for-claudes-blackmail-attempts/)
+**6️⃣ 중국 AI 4개사, 12일 만에 오픈소스 코딩 모델 일제 출시**
+Z.ai(GLM-5.1), MiniMax(M2.7), Moonshot(Kimi K2.6), DeepSeek(V4) 등 중국 AI 연구소 4곳이 12일 간격으로 오픈웨이트 코딩 특화 모델을 잇달아 공개했습니다. 오픈소스 AI 분야에서 중국 기업들의 존재감이 한층 강해지고 있습니다.
+• [🔗 WhatLLM.org](https://whatllm.org/blog/new-ai-models-may-2026)
+• [🔗 AI Flash Report](https://aiflashreport.com/model-releases.html)
 
 ---
 
-*출처: Tom's Guide, BusinessToday, Korea Herald, GSMArena, DigiTimes, Anthropic, LLM Stats, WhatLLM.org, TechCrunch*`;
+**7️⃣ 미국 백악관, AI 모델 공개 전 정부 검토 행정명령 추진**
+미국 백악관이 새로운 AI 모델을 공개하기 전 정부 차원의 검토를 의무화하는 행정명령을 조만간 발동할 것으로 알려졌습니다. AI 안전성 강화와 규제를 위한 움직임이 본격화되는 신호로 해석됩니다.
+• [🔗 CNN](https://www.cnn.com/2026/05/21/us/5-things-to-know-for-may-21-ai-compensation-fund-irans-weapons-california-wildfires-food-preservatives)
+
+---
+
+*출처: Google Blog, 9to5Google, Tom's Guide, 아주경제, NPR, CNBC, WhatLLM.org, LLM Stats, AI Flash Report, CNN*`;
 
 const body = JSON.stringify({ text: message });
 
