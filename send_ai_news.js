@@ -1,58 +1,58 @@
 const https = require('https');
 
-const message = `## 📰 AI 주요 뉴스 요약 (2026년 5월 21일)
+const message = `## 📰 AI 주요 뉴스 요약 (2026년 5월 22일)
 
 ---
 
-**1️⃣ Google I/O 2026: Gemini 3.5 Flash·Omni·Spark 공개**
-Google이 I/O 2026에서 플래그십 수준 성능을 Flash 속도로 제공하는 Gemini 3.5 Flash를 정식 출시했습니다. 영상 포함 모든 멀티모달 콘텐츠를 생성하는 Gemini Omni, 사용자 대신 디지털 작업을 처리하는 개인 에이전트 Gemini Spark도 함께 발표됐습니다. 검색 내 정보 에이전트, Universal Cart 등 AI 에이전트 기반 기능도 대거 공개됐습니다.
-• [🔗 Google Blog](https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/)
-• [🔗 9to5Google](https://9to5google.com/2026/05/19/google-io-2026-news/)
+**1️⃣ OpenAI, 9월 기업공개(IPO) 목표로 S-1 제출 추진**
+OpenAI가 9월 상장을 목표로 SEC에 기밀 S-1을 제출할 예정이며, 기업 가치는 약 8,520억~1조 달러 규모로 평가됩니다. Anthropic도 10월 상장을 목표로 9,000억 달러 가치로 투자자들과 논의 중이며, SpaceX까지 포함하면 세 기업이 공개시장에서 약 2,000억 달러 조달을 시도합니다.
+• [🔗 Euronews](https://www.euronews.com/business/2026/05/22/5-things-to-know-about-openais-potentially-record-breaking-ipo-plans)
+• [🔗 Yahoo Finance](https://finance.yahoo.com/markets/article/spacex-openai-and-anthropic-here-are-the-most-anticipated-ipos-in-2026-114439441.html)
 
 ---
 
-**2️⃣ 구글·삼성 AI 스마트 글래스 '인텔리전트 아이웨어' 실물 최초 공개**
-Google I/O 2026에서 삼성전자와 공동 개발 중인 AI 스마트 글래스 '인텔리전트 아이웨어(Intelligent Eyewear)'의 실물 디자인이 처음 공개됐습니다. Android XR 플랫폼 기반으로 실시간 번역·AI 어시스턴트 기능을 갖추며 가을 출시를 목표로 합니다.
-• [🔗 Tom's Guide](https://www.tomsguide.com/news/live/google-io-2026-live-news-updates)
-• [🔗 아주경제](https://www.ajunews.com/view/20260521080240253)
+**2️⃣ Anthropic, 사상 첫 분기 영업흑자 달성 전망**
+Anthropic이 2026년 2분기(Q2) 사상 첫 분기 영업이익 달성을 눈앞에 두고 있으며, 2분기 예상 매출은 109억 달러(약 15조 원)에 달합니다. AI 스타트업이 빠르게 수익 궤도에 진입하면서 투자자들의 기대도 높아지고 있습니다.
+• [🔗 Build Fast with AI](https://www.buildfastwithai.com/blogs/ai-news-today-may-22-2026)
+• [🔗 NeuralBuddies](https://www.neuralbuddies.com/p/ai-news-recap-may-22-2026)
 
 ---
 
-**3️⃣ Meta, AI 투자 확대 위해 8,000명 해고 단행**
-Meta가 전체 인력의 약 10%인 8,000명 규모 구조조정을 시작했습니다. 채용·고객지원·콘텐츠 모더레이션 등 AI 비관련 직군이 주 대상이며, 약 7,000명은 AI 중심 팀으로 재배치됩니다. Meta는 2026년 자본 지출 목표를 최대 1,450억 달러로 상향 조정하며 AI 인프라에 집중하고 있습니다.
-• [🔗 NPR](https://www.npr.org/2026/05/20/nx-s1-5826917/meta-layoffs-ai-jobs)
-• [🔗 CNBC](https://www.cnbc.com/2026/05/18/metas-layoffs-starting-this-week-underscore-zuckerbergs-ai-reality-.html)
+**3️⃣ Andrej Karpathy, Anthropic 합류 — AI 인재 전쟁 가속화**
+OpenAI 공동창업자이자 AI계 최고 권위자 중 한 명인 Andrej Karpathy가 Anthropic 사전 훈련(Pre-training) 팀에 합류했습니다. 그는 Claude를 이용해 Claude의 훈련을 고도화하는 팀을 이끌 예정이며, 2025년 중반부터 2026년 초 사이 빅테크 CTO 6명이 Anthropic 연구직으로 이직한 사례가 이어지고 있습니다.
+• [🔗 IndMoney](https://www.indmoney.com/blog/us-stocks/andrej-karpathy-joins-anthropic-the-ai-talent-war-investors-must-understand)
+• [🔗 Hacker News](https://news.ycombinator.com/item?id=48194352)
 
 ---
 
-**4️⃣ GPT-5.5 Instant, ChatGPT 기본 모델로 전환**
-OpenAI가 ChatGPT의 기본 모델을 GPT-5.5 Instant로 교체했습니다. 4월의 대형 모델 경쟁 이후 5월에는 스케일보다 아키텍처 혁신에 집중하는 분위기가 형성되고 있으며, xAI Grok 4.3도 같은 기간 더 넓은 사용자층에 공개됐습니다.
-• [🔗 WhatLLM.org](https://whatllm.org/blog/new-ai-models-may-2026)
+**4️⃣ Meta, 전 세계 직원 10% 감원 — 7,000명은 AI 업무로 전환**
+Meta가 전 세계 직원의 약 10%에 해당하는 8,000여 명을 감원하고, 6,000명 신규 채용 계획도 취소했습니다. 동시에 기존 직원 7,000명을 AI 워크플로우 관련 업무로 전환 배치하며 AI 중심 조직 재편을 가속화합니다.
+• [🔗 Sherwood News](https://sherwood.news/tech/meta-to-lay-off-8-000-employees-move-7-000-to-new-initiatives-related-to-ai/)
+• [🔗 The Creators AI](https://thecreatorsai.com/p/google-io-drops-100-things-karpathy)
+
+---
+
+**5️⃣ Google, Gemini 3.5 Flash 정식 출시 — 동급 최고 속도**
+Google이 I/O 2026에서 Gemini 3.5 Flash를 정식 출시했습니다. 동급 모델 대비 4배 빠른 속도를 자랑하며, 100만 토큰 컨텍스트 지원, 코딩 및 에이전트 벤치마크에서 Gemini 3.1 Pro를 능가합니다. 가격은 입력 100만 토큰당 $1.50, 출력 $9입니다.
+• [🔗 WhatLLM](https://whatllm.org/blog/new-ai-models-may-2026)
+• [🔗 Google Blog](https://blog.google/products-and-platforms/products/search/search-io-2026/)
+
+---
+
+**6️⃣ Microsoft AI 수장 "18개월 내 화이트칼라 업무 전면 자동화"**
+Microsoft AI 최고경영자 Mustafa Suleyman이 앞으로 18개월 내에 모든 화이트칼라 업무가 AI에 의해 자동화될 것이라는 파격적인 전망을 내놓았습니다. AI 에이전트의 급속한 발전과 함께 기업들의 업무 자동화 도입이 가파르게 증가하고 있습니다.
+• [🔗 Fortune](https://fortune.com/article/why-microsoft-ai-chief-mustafa-suleyman-predicts-ai-automation-18-months/)
+
+---
+
+**7️⃣ 세계 최초 서브쿼드라틱 상업용 LLM 'SubQ 1M-Preview' 출시**
+스타트업 Subquadratic이 기존 트랜스포머 구조를 넘어서는 서브쿼드라틱(Subquadratic) 아키텍처 기반의 첫 상업용 LLM 'SubQ 1M-Preview'를 출시했습니다. 1,200만 토큰이라는 초대형 컨텍스트를 지원하며, 효율적 추론이 가능한 차세대 LLM 구조로 주목받고 있습니다.
+• [🔗 WhatLLM](https://whatllm.org/blog/new-ai-models-may-2026)
 • [🔗 LLM Stats](https://llm-stats.com/ai-news)
 
 ---
 
-**5️⃣ SubQ, 트랜스포머 탈피 상용 LLM 최초 출시·2,900만 달러 투자 유치**
-SubQ가 트랜스포머가 아닌 서브쿼드라틱(subquadratic) 아키텍처 기반의 첫 상용 LLM을 출시하며 2,900만 달러 시드 투자를 유치했습니다. 1,200만 토큰 컨텍스트를 지원하며 기존 프런티어 모델 대비 장문 처리 비용 및 속도에서 이점을 주장합니다.
-• [🔗 WhatLLM.org](https://whatllm.org/blog/new-ai-models-may-2026)
-• [🔗 AI Flash Report](https://aiflashreport.com/model-releases.html)
-
----
-
-**6️⃣ 중국 AI 4개사, 12일 만에 오픈소스 코딩 모델 일제 출시**
-Z.ai(GLM-5.1), MiniMax(M2.7), Moonshot(Kimi K2.6), DeepSeek(V4) 등 중국 AI 연구소 4곳이 12일 간격으로 오픈웨이트 코딩 특화 모델을 잇달아 공개했습니다. 오픈소스 AI 분야에서 중국 기업들의 존재감이 한층 강해지고 있습니다.
-• [🔗 WhatLLM.org](https://whatllm.org/blog/new-ai-models-may-2026)
-• [🔗 AI Flash Report](https://aiflashreport.com/model-releases.html)
-
----
-
-**7️⃣ 미국 백악관, AI 모델 공개 전 정부 검토 행정명령 추진**
-미국 백악관이 새로운 AI 모델을 공개하기 전 정부 차원의 검토를 의무화하는 행정명령을 조만간 발동할 것으로 알려졌습니다. AI 안전성 강화와 규제를 위한 움직임이 본격화되는 신호로 해석됩니다.
-• [🔗 CNN](https://www.cnn.com/2026/05/21/us/5-things-to-know-for-may-21-ai-compensation-fund-irans-weapons-california-wildfires-food-preservatives)
-
----
-
-*출처: Google Blog, 9to5Google, Tom's Guide, 아주경제, NPR, CNBC, WhatLLM.org, LLM Stats, AI Flash Report, CNN*`;
+*출처: Build Fast with AI, NeuralBuddies, Euronews, Yahoo Finance, IndMoney, Sherwood News, Fortune, Google Blog, WhatLLM, LLM Stats*`;
 
 const body = JSON.stringify({ text: message });
 
@@ -74,15 +74,15 @@ const req = https.request(options, (res) => {
   });
   res.on('end', () => {
     if (data.trim() === 'ok') {
-      console.log('\n✅ 발송 성공: Mattermost 채널에 AI 뉴스가 정상적으로 전송되었습니다.');
+      console.log('\n✅ Mattermost 발송 성공!');
     } else {
-      console.log('\n응답:', data);
+      console.log('\n⚠️ 응답:', data);
     }
   });
 });
 
 req.on('error', (e) => {
-  console.error('❌ 발송 실패:', e.message);
+  console.error('❌ 오류 발생:', e.message);
 });
 
 req.write(body, 'utf8');
