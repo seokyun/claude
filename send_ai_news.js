@@ -1,6 +1,59 @@
 const https = require('https');
 
-const body = JSON.stringify({"text": "## 📰 AI 주요 뉴스 요약 (2026년 5월 24일)\n\n---\n\n**1️⃣ Anthropic, $900B 밸류에이션 펀딩 & 게이츠 재단과 $2억 파트너십**\nAnthropic이 $30B 이상의 Series G 펀딩을 $900B 이상의 기업가치로 마감 예정이라고 Bloomberg가 보도했습니다. OpenAI를 제치고 세계 최고 가치 AI 스타트업이 되는 규모이며, 게이츠 재단과 $2억·4년 파트너십으로 저개발 지역 헬스케어·교육·농업 분야 AI 도구도 개발합니다.\n• [🔗 TechTimes](https://www.techtimes.com/articles/317066/20260523/anthropic-funding-round-top-30b-900b-valuation-would-surpass-openai-most-valuable-ai-startup.htm)\n• [🔗 MobiHealthNews](https://www.mobihealthnews.com/news/anthropic-partners-gates-foundation-amid-reported-30b-investment)\n\n---\n\n**2️⃣ Google I/O 2026 — Gemini Omni 공개: 대화형 영상 생성 AI**\n구글이 5월 19일 Google I/O 2026에서 Gemini Omni를 발표했습니다. 텍스트·이미지·오디오·영상 복합 입력으로 고품질 영상을 생성하고 대화로 편집하는 멀티모달 모델입니다. YouTube Shorts 및 Google Flow에 무료 제공되며, 생성 영상에는 SynthID 워터마크가 자동 삽입됩니다.\n• [🔗 Cybernews](https://cybernews.com/ai-news/google-io-2026-gemini-omni-antigravity-agentic-ai/)\n• [🔗 Google Blog](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni/)\n\n---\n\n**3️⃣ OpenAI GPT-5.5 API 정식 출시 & NVIDIA 차세대 인프라 협력**\nOpenAI의 GPT-5.5 및 GPT-5.5 Pro가 API를 통해 공개됩니다. 코딩·추론·멀티모달에서 강점을 보이며 NVIDIA GB200/GB300 NVL72 시스템에 최적화해 학습·서빙됩니다. OpenAI는 차세대 AI 인프라에 NVIDIA 시스템 10기가와트 이상 배포를 약속했습니다.\n• [🔗 OpenAI](https://openai.com/index/introducing-gpt-5-5/)\n• [🔗 NVIDIA Blog](https://blogs.nvidia.com/blog/openai-codex-gpt-5-5-ai-agents/)\n\n---\n\n**4️⃣ Google Gemini 3.5 Flash GA — 프런티어 지능을 4배 빠르게**\nGemini 3.5 Flash가 일반 제공(GA)으로 전환됩니다. 동급 모델 대비 4배 빠른 속도에 100만 토큰 컨텍스트 윈도우를 지원하며, Terminal-Bench 2.1에서 76.2%로 Gemini 3.1 Pro를 코딩·에이전트 부문에서 앞질렀습니다. 가격은 입력 $1.50 / 출력 $9 (1M 토큰 기준)입니다.\n• [🔗 CNBC](https://www.cnbc.com/2026/05/19/google-ai-ultra-gemini-spark-omni.html)\n• [🔗 LLM Stats](https://llm-stats.com/ai-news)\n\n---\n\n**5️⃣ Sakana AI, KAME 아키텍처 — 실시간 LLM 지식 주입 음성-음성 시스템**\n일본 Sakana AI가 KAME(Knowledge-Access Model Extension)를 발표했습니다. 직접 음성-음성 시스템의 거의 제로 응답 지연을 유지하면서 LLM 지식을 실시간으로 주입하는 하이브리드 탠덤 아키텍처입니다. 음성 AI의 품질과 속도를 동시에 달성하는 새로운 접근법입니다.\n• [🔗 MarkTechPost](https://www.marktechpost.com/2026/05/03/sakana-ai-introduces-kame-a-tandem-speech-to-speech-architecture-that-injects-llm-knowledge-in-real-time/)\n\n---\n\n**6️⃣ Subquadratic, 비(非)트랜스포머 LLM 'SubQ' 출시 — 1,200만 토큰 컨텍스트**\n$2,900만 시드 투자를 유치한 Subquadratic이 최초의 상업용 서브쿼드라틱 LLM 'SubQ 1M-Preview'를 공개했습니다. 트랜스포머가 아닌 신규 아키텍처를 채용하며 1,200만 토큰의 초장문 컨텍스트를 지원합니다. 5월은 스케일보다 아키텍처 혁신이 주목받은 달로 평가됩니다.\n• [🔗 WhatLLM](https://whatllm.org/blog/new-ai-models-may-2026)\n• [🔗 LLM Stats](https://llm-stats.com/llm-updates)\n\n---\n\n**7️⃣ EU AI Act, 2026년 8월까지 각국 AI 규제 샌드박스 설치 의무화**\nEU AI Act 제57조에 따라 모든 EU 회원국은 8월 2일까지 국가 AI 규제 샌드박스를 최소 1개 구축해야 합니다. 세계 최초의 포괄적 AI 법적 프레임워크 시행이 가속화되며, 혁신 기업들이 당국 감독 하에 새 AI 시스템을 안전하게 테스트할 수 있는 환경을 제공합니다.\n• [🔗 Build Fast With AI](https://www.buildfastwithai.com/blogs/ai-news-today-may-23-2026)\n\n---\n\n*출처: TechTimes, MobiHealthNews, Cybernews, Google Blog, OpenAI, NVIDIA Blog, CNBC, MarkTechPost, WhatLLM, Build Fast With AI*"});
+const message = `## 📰 AI 주요 뉴스 요약 (2026년 5월 25일)
+
+---
+
+**1️⃣ Anthropic, 9,000억 달러 기업가치로 300억 달러 투자 유치 임박**
+Anthropic이 Sequoia, Dragoneer, Greenoaks, Altimeter 등이 공동 주도하는 300억 달러 규모의 투자 라운드를 이번 주 마감할 예정입니다. 이번 평가 가치는 9,000억 달러 이상으로 OpenAI의 8,520억 달러를 능가하며, Anthropic 역사상 처음으로 분기 흑자도 전망됩니다.
+• [🔗 BuildFastWithAI](https://www.buildfastwithai.com/blogs/ai-news-today-may-25-2026)
+
+---
+
+**2️⃣ 교황 레오 14세, AI 관련 첫 회칙 '마그니피카 후마니타스' 발표**
+교황 레오 14세가 AI 시대의 인간 보호를 주제로 한 235페이지 분량의 첫 회칙을 발표했습니다. AI 통제권이 소수에게 집중되어서는 안 된다고 경고하며, Anthropic 공동창립자 Chris Olah와 함께 공개했습니다.
+• [🔗 TechCrunch](https://techcrunch.com/2026/05/25/the-popes-ai-encyclical-isnt-really-about-ai/)
+• [🔗 CNN](https://www.cnn.com/2026/05/25/europe/pope-leo-ai-encyclical-magnifica-humanitas-intl)
+
+---
+
+**3️⃣ Andrej Karpathy, Anthropic 합류해 사전학습 팀 재건**
+OpenAI 공동 창업자이자 전 테슬라 오토파일럿 책임자인 Andrej Karpathy가 Anthropic에 합류하여 사전학습(pretraining) 연구팀을 내부에서 재건할 예정입니다. AI 연구 역량 강화 차원에서 주목받는 인재 영입입니다.
+• [🔗 BuildFastWithAI](https://www.buildfastwithai.com/blogs/ai-news-today-may-25-2026)
+
+---
+
+**4️⃣ Google, Gemini 3.5 Flash를 검색 AI 모드 기본 모델로 채택**
+Google이 최신 Flash 모델인 Gemini 3.5 Flash를 전 세계 사용자의 AI 검색 모드 기본 모델로 적용했습니다. 에이전트 및 코딩 작업에서 프론티어 수준의 성능을 4배 빠른 속도로 제공하며 100만 토큰 컨텍스트를 지원합니다.
+• [🔗 Google Blog](https://blog.google/products-and-platforms/products/search/search-io-2026/)
+• [🔗 LLM Stats](https://llm-stats.com/ai-news)
+
+---
+
+**5️⃣ 최초의 상용 서브쿼드래틱 LLM 'SubQ' 출시**
+트랜스포머 아키텍처를 사용하지 않는 최초의 상용 서브쿼드래틱 LLM 'SubQ'가 2,900만 달러 시드 투자와 함께 출시됩니다. 1,200만 토큰 기본 컨텍스트를 지원하며 장문 처리 비용이 기존 대비 1/5, 어텐션 속도는 최대 52배 빠릅니다.
+• [🔗 WhatLLM](https://whatllm.org/blog/new-ai-models-may-2026)
+• [🔗 LLM Stats](https://llm-stats.com/llm-updates)
+
+---
+
+**6️⃣ Anthropic, Google·Broadcom과 기가와트 규모 컴퓨트 파트너십 체결**
+Anthropic이 급증하는 고객 수요를 감당하기 위해 Google과 Broadcom과 기가와트 규모의 차세대 컴퓨팅 인프라 파트너십을 체결했습니다. 연간 100만 달러 이상 지출 기업 수가 2개월 만에 1,000개를 초과하며 두 배로 늘었습니다.
+• [🔗 Anthropic](https://www.anthropic.com/news/google-broadcom-partnership-compute)
+• [🔗 Axios](https://www.axios.com/2026/05/21/google-ai-anthropic-openai-war)
+
+---
+
+**7️⃣ 에이전틱 AI, 기업 전반으로 본격 확산 — 96% 기업이 이미 도입**
+OutSystems 조사에 따르면 96%의 기업이 이미 AI 에이전트를 사용 중이며, ServiceNow-Accenture 파트너십 및 Cognizant Secure AI 서비스 출시 등 기업용 AI 거버넌스 솔루션 경쟁이 치열해지고 있습니다. 다만 94%는 AI 스프롤에 따른 복잡성과 보안 리스크를 우려하고 있습니다.
+• [🔗 BusinessWire](https://www.businesswire.com/news/home/20260407749542/en/Agentic-AI-Goes-Mainstream-in-the-Enterprise-but-94-Raise-Concern-About-Sprawl-OutSystems-Research-Finds)
+• [🔗 Accenture Newsroom](https://newsroom.accenture.com/news/2026/servicenow-and-accenture-launch-forward-deployed-engineering-program-to-scale-agentic-ai-across-the-enterprise)
+
+---
+
+*출처: BuildFastWithAI, TechCrunch, CNN, Google Blog, LLM Stats, WhatLLM, Anthropic, Axios, BusinessWire, Accenture*`;
+
+const body = JSON.stringify({ text: message });
 
 const options = {
   hostname: 'matter.goodrich.kr',
@@ -14,22 +67,22 @@ const options = {
 
 const req = https.request(options, (res) => {
   let data = '';
-  res.on('data', (d) => {
-    data += d.toString('utf8');
+  res.on('data', d => {
+    data += d;
     process.stdout.write(d);
   });
   res.on('end', () => {
+    console.log('');
     if (data.trim() === 'ok') {
-      console.log('\n✅ Mattermost 발송 성공! AI 뉴스가 채널에 전달되었습니다.');
+      console.log('✅ Mattermost 발송 성공!');
     } else {
-      console.log('\n⚠️ 서버 응답:', data);
+      console.log('응답: ' + data);
     }
   });
 });
 
 req.on('error', (e) => {
-  console.error('❌ 발송 오류:', e.message);
-  process.exit(1);
+  console.error('❌ 발송 실패: ' + e.message);
 });
 
 req.write(body, 'utf8');
