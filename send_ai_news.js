@@ -1,57 +1,58 @@
 const https = require('https');
 
-const message = `## 📰 AI 주요 뉴스 요약 (2026년 5월 25일)
+const message = `## 📰 AI 주요 뉴스 요약 (2026년 5월 27일)
 
 ---
 
-**1️⃣ Anthropic, 9,000억 달러 기업가치로 300억 달러 투자 유치 임박**
-Anthropic이 Sequoia, Dragoneer, Greenoaks, Altimeter 등이 공동 주도하는 300억 달러 규모의 투자 라운드를 이번 주 마감할 예정입니다. 이번 평가 가치는 9,000억 달러 이상으로 OpenAI의 8,520억 달러를 능가하며, Anthropic 역사상 처음으로 분기 흑자도 전망됩니다.
-• [🔗 BuildFastWithAI](https://www.buildfastwithai.com/blogs/ai-news-today-may-25-2026)
+**1️⃣ Anthropic, $300억 펀딩 마감 — 기업가치 $9,000억으로 세계 최고가 비상장 AI 기업 등극**
+Anthropic이 Sequoia, Dragoneer, Altimeter, Greenoaks 주도로 300억 달러 이상의 펀딩 라운드를 공식 마감했습니다. 사전 기업가치 9,000억 달러 이상으로 OpenAI(8,520억 달러)를 제치고 세계 최고가 비상장 AI 스타트업이 됐습니다. Microsoft, NVIDIA, Founders Fund도 참여했으며, 2026년 10월 IPO를 목표로 하고 있습니다.
+• [🔗 TechTimes](https://www.techtimes.com/articles/317066/20260523/anthropic-funding-round-top-30b-900b-valuation-would-surpass-openai-most-valuable-ai-startup.htm)
+• [🔗 TechCrunch](https://techcrunch.com/2026/04/30/anthropic-potential-900b-valuation-round-could-happen-within-two-weeks/)
 
 ---
 
-**2️⃣ 교황 레오 14세, AI 관련 첫 회칙 '마그니피카 후마니타스' 발표**
-교황 레오 14세가 AI 시대의 인간 보호를 주제로 한 235페이지 분량의 첫 회칙을 발표했습니다. AI 통제권이 소수에게 집중되어서는 안 된다고 경고하며, Anthropic 공동창립자 Chris Olah와 함께 공개했습니다.
-• [🔗 TechCrunch](https://techcrunch.com/2026/05/25/the-popes-ai-encyclical-isnt-really-about-ai/)
-• [🔗 CNN](https://www.cnn.com/2026/05/25/europe/pope-leo-ai-encyclical-magnifica-humanitas-intl)
+**2️⃣ Google I/O 2026: 검색 AI 에이전트 시대 개막, 25년 만의 검색창 전면 개편**
+Google이 I/O 2026에서 검색 에이전트 시대를 선언했습니다. 사용자가 여러 AI 에이전트를 직접 생성·관리할 수 있으며, 24시간 백그라운드로 동작하는 정보 에이전트가 아파트 매물, 운동선수 소식 등을 자동 모니터링해 알려줍니다. Gemini 3.5 Flash가 AI Mode 기본 모델로 채택되며 검색창도 25년 만에 전면 개편됩니다.
+• [🔗 Google 공식 블로그](https://blog.google/products-and-platforms/products/search/search-io-2026/)
+• [🔗 Analytics Vidhya](https://www.analyticsvidhya.com/blog/2026/05/google-i-o-2026-updates/)
 
 ---
 
-**3️⃣ Andrej Karpathy, Anthropic 합류해 사전학습 팀 재건**
-OpenAI 공동 창업자이자 전 테슬라 오토파일럿 책임자인 Andrej Karpathy가 Anthropic에 합류하여 사전학습(pretraining) 연구팀을 내부에서 재건할 예정입니다. AI 연구 역량 강화 차원에서 주목받는 인재 영입입니다.
-• [🔗 BuildFastWithAI](https://www.buildfastwithai.com/blogs/ai-news-today-may-25-2026)
-
----
-
-**4️⃣ Google, Gemini 3.5 Flash를 검색 AI 모드 기본 모델로 채택**
-Google이 최신 Flash 모델인 Gemini 3.5 Flash를 전 세계 사용자의 AI 검색 모드 기본 모델로 적용했습니다. 에이전트 및 코딩 작업에서 프론티어 수준의 성능을 4배 빠른 속도로 제공하며 100만 토큰 컨텍스트를 지원합니다.
-• [🔗 Google Blog](https://blog.google/products-and-platforms/products/search/search-io-2026/)
-• [🔗 LLM Stats](https://llm-stats.com/ai-news)
-
----
-
-**5️⃣ 최초의 상용 서브쿼드래틱 LLM 'SubQ' 출시**
-트랜스포머 아키텍처를 사용하지 않는 최초의 상용 서브쿼드래틱 LLM 'SubQ'가 2,900만 달러 시드 투자와 함께 출시됩니다. 1,200만 토큰 기본 컨텍스트를 지원하며 장문 처리 비용이 기존 대비 1/5, 어텐션 속도는 최대 52배 빠릅니다.
-• [🔗 WhatLLM](https://whatllm.org/blog/new-ai-models-may-2026)
+**3️⃣ SubQ, 트랜스포머 탈피한 서브쿼드래틱 모델 공개 — 컨텍스트 1,200만 토큰**
+SubQ가 2,900만 달러 시드 투자와 함께 트랜스포머 구조를 사용하지 않는 서브쿼드래틱 어텐션 모델을 출시했습니다. 기본으로 1,200만 토큰 컨텍스트 윈도우를 지원하며, 장문 처리 비용은 기존 프론티어 모델의 1/5, 어텐션 속도는 최대 52배 빠른 것으로 알려졌습니다.
+• [🔗 WhatLLM.org](https://whatllm.org/blog/new-ai-models-may-2026)
 • [🔗 LLM Stats](https://llm-stats.com/llm-updates)
 
 ---
 
-**6️⃣ Anthropic, Google·Broadcom과 기가와트 규모 컴퓨트 파트너십 체결**
-Anthropic이 급증하는 고객 수요를 감당하기 위해 Google과 Broadcom과 기가와트 규모의 차세대 컴퓨팅 인프라 파트너십을 체결했습니다. 연간 100만 달러 이상 지출 기업 수가 2개월 만에 1,000개를 초과하며 두 배로 늘었습니다.
-• [🔗 Anthropic](https://www.anthropic.com/news/google-broadcom-partnership-compute)
-• [🔗 Axios](https://www.axios.com/2026/05/21/google-ai-anthropic-openai-war)
+**4️⃣ Inception, 디퓨전 LLM 'Mercury 2' 발표 — 초당 1,000토큰 이상 추론**
+Inception이 디퓨전 아키텍처 기반 추론 언어 모델 Mercury 2를 발표했습니다. 토큰을 병렬로 생성해 초당 1,000토큰 이상의 속도를 구현하며, 에이전틱 루프와 실시간 음성 인터랙션 같은 저지연 환경에서도 추론급 품질을 제공하는 것이 목표입니다.
+• [🔗 LLM Stats News](https://llm-stats.com/ai-news)
+• [🔗 AI Flash Report](https://aiflashreport.com/model-releases.html)
 
 ---
 
-**7️⃣ 에이전틱 AI, 기업 전반으로 본격 확산 — 96% 기업이 이미 도입**
-OutSystems 조사에 따르면 96%의 기업이 이미 AI 에이전트를 사용 중이며, ServiceNow-Accenture 파트너십 및 Cognizant Secure AI 서비스 출시 등 기업용 AI 거버넌스 솔루션 경쟁이 치열해지고 있습니다. 다만 94%는 AI 스프롤에 따른 복잡성과 보안 리스크를 우려하고 있습니다.
-• [🔗 BusinessWire](https://www.businesswire.com/news/home/20260407749542/en/Agentic-AI-Goes-Mainstream-in-the-Enterprise-but-94-Raise-Concern-About-Sprawl-OutSystems-Research-Finds)
-• [🔗 Accenture Newsroom](https://newsroom.accenture.com/news/2026/servicenow-and-accenture-launch-forward-deployed-engineering-program-to-scale-agentic-ai-across-the-enterprise)
+**5️⃣ GPT-5.5 Instant, ChatGPT 기본 모델로 전환**
+OpenAI가 GPT-5.5 Instant를 ChatGPT 서비스의 새로운 기본 모델로 설정했습니다. 속도와 품질을 동시에 끌어올린 이 모델은 수억 명의 일반 사용자가 일상적으로 접하는 AI 경험의 중심축이 됩니다.
+• [🔗 AI Release Tracker](https://aireleasetracker.com/)
+• [🔗 Evertune AI Tracker](https://www.evertune.ai/resources/ai-model-tracker)
 
 ---
 
-*출처: BuildFastWithAI, TechCrunch, CNN, Google Blog, LLM Stats, WhatLLM, Anthropic, Axios, BusinessWire, Accenture*`;
+**6️⃣ 생성형 AI, 창의력 테스트에서 인간 평균 능가 — 10만 명 대상 연구**
+10만 명을 대상으로 한 대규모 연구에서 생성형 AI가 표준화 창의력 테스트 전반에서 평균적인 인간을 능가했습니다. AI의 창의적 영역 진입을 알리는 이정표적 결과로, AI가 단순 반복 업무를 넘어 창작 직군에도 영향을 미칠 수 있다는 논의를 다시 촉발하고 있습니다.
+• [🔗 BuildFastWithAI](https://www.buildfastwithai.com/blogs/ai-news-today-may-27-2026)
+
+---
+
+**7️⃣ Snowflake, AI 에이전트 플랫폼 인수·AWS $60억 딜로 장 마감 후 35% 급등**
+Snowflake가 기업용 MCP(Model Context Protocol) 플랫폼 Natoma 인수 계획 및 AWS와의 60억 달러 규모 계약, 33% 매출 성장을 담은 1분기 실적을 발표하며 장 마감 후 주가가 35% 이상 급등했습니다. 데이터 웨어하우스 강자가 AI 에이전트 인프라 업체로 빠르게 전환하고 있음을 보여주는 사례입니다.
+• [🔗 BuildFastWithAI](https://www.buildfastwithai.com/blogs/ai-news-today-may-27-2026)
+• [🔗 JD Supra](https://www.jdsupra.com/legalnews/ai-today-in-5-may-27-2026-the-clock-i-77471/)
+
+---
+
+*출처: TechTimes, TechCrunch, Google Blog, Analytics Vidhya, WhatLLM.org, LLM Stats, AI Flash Report, AI Release Tracker, BuildFastWithAI, JD Supra*`;
 
 const body = JSON.stringify({ text: message });
 
