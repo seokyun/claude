@@ -1,58 +1,55 @@
 const https = require('https');
 
-const message = `## 📰 AI 주요 뉴스 요약 (2026년 5월 27일)
+const message = `## 📰 AI 주요 뉴스 요약 (2026년 5월 28일)
 
 ---
 
-**1️⃣ Anthropic, $300억 펀딩 마감 — 기업가치 $9,000억으로 세계 최고가 비상장 AI 기업 등극**
-Anthropic이 Sequoia, Dragoneer, Altimeter, Greenoaks 주도로 300억 달러 이상의 펀딩 라운드를 공식 마감했습니다. 사전 기업가치 9,000억 달러 이상으로 OpenAI(8,520억 달러)를 제치고 세계 최고가 비상장 AI 스타트업이 됐습니다. Microsoft, NVIDIA, Founders Fund도 참여했으며, 2026년 10월 IPO를 목표로 하고 있습니다.
-• [🔗 TechTimes](https://www.techtimes.com/articles/317066/20260523/anthropic-funding-round-top-30b-900b-valuation-would-surpass-openai-most-valuable-ai-startup.htm)
-• [🔗 TechCrunch](https://techcrunch.com/2026/04/30/anthropic-potential-900b-valuation-round-could-happen-within-two-weeks/)
+**1️⃣ Google I/O 2026: Gemini 3.5 Flash & Gemini Omni 공식 출시**
+Google이 I/O 2026에서 두 개의 신규 모델을 발표했습니다. Gemini 3.5 Flash는 대형 플래그십 모델 수준의 성능을 빠른 속도로 제공하며 코딩·에이전트 벤치마크에서 이전 세대를 크게 앞섰습니다. Gemini Omni는 비디오를 포함한 모든 입력 형식에서 콘텐츠를 생성하는 멀티모달 혁신 모델입니다. Managed Agents API, Gemini Spark 개인 에이전트도 함께 공개됐습니다.
+• [🔗 Google 공식 블로그](https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/)
+• [🔗 9to5Google 상세 정리](https://9to5google.com/2026/05/19/google-io-2026-news/)
 
 ---
 
-**2️⃣ Google I/O 2026: 검색 AI 에이전트 시대 개막, 25년 만의 검색창 전면 개편**
-Google이 I/O 2026에서 검색 에이전트 시대를 선언했습니다. 사용자가 여러 AI 에이전트를 직접 생성·관리할 수 있으며, 24시간 백그라운드로 동작하는 정보 에이전트가 아파트 매물, 운동선수 소식 등을 자동 모니터링해 알려줍니다. Gemini 3.5 Flash가 AI Mode 기본 모델로 채택되며 검색창도 25년 만에 전면 개편됩니다.
-• [🔗 Google 공식 블로그](https://blog.google/products-and-platforms/products/search/search-io-2026/)
-• [🔗 Analytics Vidhya](https://www.analyticsvidhya.com/blog/2026/05/google-i-o-2026-updates/)
+**2️⃣ KPMG, 전 세계 27만 6천 명 직원에 Claude AI 전면 도입**
+글로벌 컨설팅 기업 KPMG가 138개국 276,000명 임직원 전체에 Anthropic의 Claude를 배포했습니다. 역대 최대 규모의 엔터프라이즈 AI 도입 사례 중 하나로, OpenAI도 별도로 40억 달러 규모의 AI 컨설팅 자회사 DeployCo를 출범하며 기업 시장 공략을 가속화하고 있습니다.
+• [🔗 Build Fast With AI](https://www.buildfastwithai.com/blogs/ai-news-today-may-28-2026)
 
 ---
 
-**3️⃣ SubQ, 트랜스포머 탈피한 서브쿼드래틱 모델 공개 — 컨텍스트 1,200만 토큰**
-SubQ가 2,900만 달러 시드 투자와 함께 트랜스포머 구조를 사용하지 않는 서브쿼드래틱 어텐션 모델을 출시했습니다. 기본으로 1,200만 토큰 컨텍스트 윈도우를 지원하며, 장문 처리 비용은 기존 프론티어 모델의 1/5, 어텐션 속도는 최대 52배 빠른 것으로 알려졌습니다.
-• [🔗 WhatLLM.org](https://whatllm.org/blog/new-ai-models-may-2026)
-• [🔗 LLM Stats](https://llm-stats.com/llm-updates)
+**3️⃣ Anthropic, SDK 자동생성 스타트업 Stainless를 3억 달러에 인수**
+Anthropic이 주요 AI 기업들의 SDK를 자동으로 생성해주던 스타트업 Stainless를 3억 달러 이상에 인수했습니다. OpenAI와 Google에 직접적인 타격을 주는 전략적 M&A로, Anthropic의 개발자 생태계 주도권 확보 전략이 본격화되고 있습니다.
+• [🔗 The New Stack](https://thenewstack.io/anthropic-stainless-sdk-acquisition/)
 
 ---
 
-**4️⃣ Inception, 디퓨전 LLM 'Mercury 2' 발표 — 초당 1,000토큰 이상 추론**
-Inception이 디퓨전 아키텍처 기반 추론 언어 모델 Mercury 2를 발표했습니다. 토큰을 병렬로 생성해 초당 1,000토큰 이상의 속도를 구현하며, 에이전틱 루프와 실시간 음성 인터랙션 같은 저지연 환경에서도 추론급 품질을 제공하는 것이 목표입니다.
-• [🔗 LLM Stats News](https://llm-stats.com/ai-news)
-• [🔗 AI Flash Report](https://aiflashreport.com/model-releases.html)
+**4️⃣ OpenAI vs Anthropic 매출 경쟁 — Anthropic Q2 역전 임박**
+OpenAI의 2026년 1분기 매출은 57억 달러로 Anthropic(48억 달러)를 앞서고 있지만, Anthropic의 2분기 매출 전망치가 109억 달러에 달하며 역전이 유력합니다. Anthropic은 첫 분기 흑자 달성도 눈앞에 두고 있으며, AI 3강(Google·OpenAI·Anthropic) 간 경쟁은 모델 성능을 넘어 생태계 통합 전쟁으로 진화하고 있습니다.
+• [🔗 에콘밍글](https://econmingle.com/economy/openai-anthropic-revenue-reversal-ipo-2026/)
+• [🔗 Axios](https://www.axios.com/2026/05/21/google-ai-anthropic-openai-war)
 
 ---
 
-**5️⃣ GPT-5.5 Instant, ChatGPT 기본 모델로 전환**
-OpenAI가 GPT-5.5 Instant를 ChatGPT 서비스의 새로운 기본 모델로 설정했습니다. 속도와 품질을 동시에 끌어올린 이 모델은 수억 명의 일반 사용자가 일상적으로 접하는 AI 경험의 중심축이 됩니다.
-• [🔗 AI Release Tracker](https://aireleasetracker.com/)
-• [🔗 Evertune AI Tracker](https://www.evertune.ai/resources/ai-model-tracker)
+**5️⃣ NVIDIA, 대만 AI 인프라에 연 1,500억 달러 투자 공식화**
+NVIDIA가 대만을 AI 혁명의 중심지로 유지하기 위해 연간 1,500억 달러 규모의 투자를 공식 발표했습니다. AI 반도체 공급망 강화와 함께 글로벌 AI 인프라 구축 경쟁이 한층 가열되고 있습니다.
+• [🔗 Build Fast With AI](https://www.buildfastwithai.com/blogs/ai-news-today-may-28-2026)
 
 ---
 
-**6️⃣ 생성형 AI, 창의력 테스트에서 인간 평균 능가 — 10만 명 대상 연구**
-10만 명을 대상으로 한 대규모 연구에서 생성형 AI가 표준화 창의력 테스트 전반에서 평균적인 인간을 능가했습니다. AI의 창의적 영역 진입을 알리는 이정표적 결과로, AI가 단순 반복 업무를 넘어 창작 직군에도 영향을 미칠 수 있다는 논의를 다시 촉발하고 있습니다.
-• [🔗 BuildFastWithAI](https://www.buildfastwithai.com/blogs/ai-news-today-may-27-2026)
+**6️⃣ AI 에너지 효율 100배 향상 — 광-물질 하이브리드 기술로 돌파구**
+펜실베이니아 대학 연구팀이 하이브리드 광-물질 입자 기반 기술을 개발해 AI 컴퓨팅 에너지를 최대 100배 절감하면서 정확도까지 향상시켰습니다. Google도 대형 컨텍스트 창 모델을 더 효율적으로 실행하는 TurboQuant 알고리즘을 공개하며 AI 에너지 문제 해결에 나섰습니다.
+• [🔗 ScienceDaily](https://www.sciencedaily.com/releases/2026/04/260405003952.htm)
+• [🔗 InfoWorld](https://www.infoworld.com/article/4108092/6-ai-breakthroughs-that-will-define-2026.html)
 
 ---
 
-**7️⃣ Snowflake, AI 에이전트 플랫폼 인수·AWS $60억 딜로 장 마감 후 35% 급등**
-Snowflake가 기업용 MCP(Model Context Protocol) 플랫폼 Natoma 인수 계획 및 AWS와의 60억 달러 규모 계약, 33% 매출 성장을 담은 1분기 실적을 발표하며 장 마감 후 주가가 35% 이상 급등했습니다. 데이터 웨어하우스 강자가 AI 에이전트 인프라 업체로 빠르게 전환하고 있음을 보여주는 사례입니다.
-• [🔗 BuildFastWithAI](https://www.buildfastwithai.com/blogs/ai-news-today-may-27-2026)
-• [🔗 JD Supra](https://www.jdsupra.com/legalnews/ai-today-in-5-may-27-2026-the-clock-i-77471/)
+**7️⃣ Google SynthID 워터마크 5천만 건 돌파 — OpenAI·카카오 등도 채택**
+Google의 AI 생성 콘텐츠 워터마킹 기술 SynthID 적용 건수가 5천만 건을 넘어섰으며, OpenAI·카카오·Eleven Labs가 추가로 채택했습니다. Google은 C2PA 콘텐츠 인증 검증을 Gemini 앱에 오늘부터 시작하고, 검색·크롬으로도 확장할 예정입니다.
+• [🔗 Google 공식 블로그](https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/)
 
 ---
 
-*출처: TechTimes, TechCrunch, Google Blog, Analytics Vidhya, WhatLLM.org, LLM Stats, AI Flash Report, AI Release Tracker, BuildFastWithAI, JD Supra*`;
+*출처: Google Blog, Build Fast With AI, The New Stack, 에콘밍글, Axios, ScienceDaily, InfoWorld, 9to5Google*`;
 
 const body = JSON.stringify({ text: message });
 
