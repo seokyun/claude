@@ -1,55 +1,57 @@
 const https = require('https');
 
-const message = `## 📰 AI 주요 뉴스 요약 (2026년 5월 29일)
+const message = `## 📰 AI 주요 뉴스 요약 (2026년 6월 4일)
 
 ---
 
-**1️⃣ Anthropic, Claude Opus 4.8 출시 및 65억 달러 추가 투자 유치**
-Anthropic이 최신 모델 Claude Opus 4.8을 공개했습니다. 이전 모델 대비 코딩 점수(64.3% → 69.2%), 멀티모달 추론(54.7% → 57.9%) 등이 향상되며, Claude Code에 '동적 워크플로(Dynamic Workflows)' 기능이 연구 프리뷰로 추가됐습니다. 가격은 이전과 동일하게 유지되며, 이날 65억 달러 규모의 추가 투자도 함께 발표됐습니다.
-• [🔗 TechCrunch](https://techcrunch.com/2026/05/28/anthropic-releases-opus-4-8-with-new-dynamic-workflow-tool/)
-• [🔗 SiliconANGLE](https://siliconangle.com/2026/05/28/anthropic-launches-claude-opus-4-8-raises-65b-new-funding/)
-• [🔗 MacRumors](https://www.macrumors.com/2026/05/28/anthropic-claude-opus-4-8/)
+**1️⃣ OpenAI, GPT-Rosalind 글로벌 접근 확대 및 바이오방어 프로그램 출범**
+OpenAI가 생명과학 특화 추론 모델 GPT-Rosalind의 대규모 업데이트를 발표했습니다. 약물 발견·유전체학·실험실 연구 성능이 대폭 향상됐으며, 처음으로 전 세계 적격 기관에 리서치 프리뷰를 개방했습니다. 미국 정부 및 동맹 공중보건 파트너와 협력하는 '로절린드 바이오디펜스' 프로그램도 공식 출범해 AI의 바이오 안보 분야 진출이 본격화되고 있습니다.
+• [🔗 OpenAI - GPT-Rosalind 신규 기능 소개](https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind/)
+• [🔗 OpenAI - Rosalind Biodefense 프로그램](https://openai.com/index/strengthening-societal-resilience-with-rosalind-biodefense/)
+• [🔗 TechTimes - GPT-Rosalind 업데이트 상세](https://www.techtimes.com/articles/317754/20260604/gpt-rosalind-drug-discovery-update-openai-cuts-genomics-compute-expands-global-access.htm)
 
 ---
 
-**2️⃣ Google, Gemini 3.5 Flash 정식 출시(GA)**
-Google의 Gemini 3.5 Flash가 일반 공개(GA) 단계에 돌입했습니다. 동급 모델 대비 4배 빠른 속도로 프론티어급 지능을 제공하며, 비용 효율적인 추론 및 에이전트 작업에 최적화된 모델로 평가받고 있습니다.
-• [🔗 LLM Stats](https://llm-stats.com/ai-news)
-• [🔗 WhatLLM](https://whatllm.org/blog/new-ai-models-may-2026)
+**2️⃣ Google, Gemini 3.5 Flash 정식 공개 및 Managed Agents API 출시**
+Google이 Gemini 3.5 Flash를 정식 공개했습니다. 대형 플래그십 모델 수준의 지능을 갖추면서 빠른 응답 속도를 자랑하며, 코딩·에이전틱 벤치마크에서 Gemini 3.1 Pro를 능가했습니다. 단일 API 호출로 격리된 Linux 환경에서 에이전트를 실행하는 Managed Agents API도 함께 출시되어 개발자들의 에이전트 구축이 더욱 쉬워졌습니다.
+• [🔗 Google Blog - I/O 2026 주요 발표 100선](https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/)
+• [🔗 Tosea.ai - Google I/O 2026 총정리](https://tosea.ai/blog/google-io-2026-announcements-recap)
 
 ---
 
-**3️⃣ SubQ, 트랜스포머 아닌 최초 상용 LLM 출시 — 1,200만 토큰 컨텍스트**
-스타트업 SubQ가 2,900만 달러 시드 투자를 바탕으로 최초의 비(非)트랜스포머 상용 LLM을 선보였습니다. 네이티브 1,200만 토큰 컨텍스트 윈도우를 지원하며, 장문 컨텍스트 작업에서 기존 프론티어 모델 대비 1/5 비용, 최대 52배 빠른 어텐션 처리 속도를 달성했다고 밝혔습니다.
-• [🔗 WhatLLM 리포트](https://whatllm.org/blog/new-ai-models-may-2026)
+**3️⃣ MiniMax, 신규 고속 LLM 3종 연달아 출시**
+중국 AI 스타트업 MiniMax가 6월 3일 M2.5 Highspeed, M2.7 Highspeed, M2.7 모델 3종을 동시 출시했습니다. 알리바바의 Qwen3 Coder Next도 함께 공개됐습니다. 현재 AI 모델은 평균 3일마다 새로 출시되며, 전 세계에 500종 이상의 LLM이 경쟁 중인 격변의 시대가 이어지고 있습니다.
+• [🔗 LLM Stats - 최신 AI 모델 업데이트](https://llm-stats.com/llm-updates)
+• [🔗 Price Per Token - 오늘의 신규 모델](https://pricepertoken.com/news/model-releases)
 
 ---
 
-**4️⃣ OpenAI, '배포 회사' 설립 — 19개 투자사와 40억 달러 초기 자본**
-OpenAI가 19개 글로벌 투자사·컨설팅·시스템통합사와 협력해 'OpenAI Deployment Company'를 출범했습니다. TPG가 리드 파트너로 참여하고 Advent, Bain Capital, Brookfield가 공동 창립 파트너로 나섰으며, 초기 자본 40억 달러 이상으로 기업 AI 도입 가속화를 목표로 합니다.
-• [🔗 OpenAI 공식 발표](https://openai.com/index/openai-launches-the-deployment-company/)
+**4️⃣ Broadcom, AI 호실적에도 주가 12% 급락… 과열된 기대치가 문제**
+Broadcom이 분기 최대 매출·수익 기록을 달성하고 AI 부문 84% 연간 성장률을 전망했음에도, 이미 고공행진한 주가 대비 기대를 충족하지 못해 6월 4일 주가가 12.59% 급락했습니다. AI 인프라 투자 과열에 대한 시장의 경계심을 보여주는 사례로 주목받고 있습니다.
+• [🔗 Motley Fool - 6월 4일 주식 시장 동향](https://www.fool.com/coverage/stock-market-today/2026/06/04/stock-market-today-june-4-broadcom-shares-plunge-after-ai-outlook-misses-high-investor-expectations/)
 
 ---
 
-**5️⃣ NVIDIA·IREN, 5기가와트 AI 인프라 구축 전략적 파트너십 체결**
-NVIDIA와 AI 데이터센터 기업 IREN이 최대 5GW 규모의 AI 팩토리 구축을 위한 전략적 파트너십을 발표했습니다. IREN은 NVIDIA에게 5년간 3,000만 주 매수권(행사가 주당 70달러, 최대 21억 달러 규모)을 부여하며, 텍사스 스위트워터 캠퍼스 2GW 부지를 주요 거점으로 활용할 예정입니다.
-• [🔗 NVIDIA Newsroom](https://nvidianews.nvidia.com/news/nvidia-and-iren-announce-strategic-partnership-to-accelerate-deployment-of-up-to-5-gigawatts-of-ai-infrastructure)
+**5️⃣ 에이전틱 AI 스타트업 투자 급증 — 평균 라운드 규모 $155M 기록**
+2026년 에이전틱 AI 시장이 폭발적으로 성장하며 최근 투자 라운드 평균 규모가 1억 5,500만 달러로 전년 대비 약 2배 증가했습니다. ElevenLabs는 시리즈 D에서 5억 달러를 조달해 기업 가치 110억 달러를 달성했습니다. 투자자들은 이제 단순한 자율성보다 안전성·가관측성·엔터프라이즈 호환성을 핵심 평가 기준으로 삼고 있습니다.
+• [🔗 AI Funding Tracker - 에이전틱 AI 상위 스타트업](https://aifundingtracker.com/top-ai-agent-startups/)
+• [🔗 New Market Pitch - 에이전틱 AI 투자 트렌드](https://newmarketpitch.com/blogs/news/agentic-ai-funding-trends)
 
 ---
 
-**6️⃣ Anysphere(Cursor), 23억 달러 시리즈 D 유치 — 기업가치 293억 달러**
-AI 코딩 도구 Cursor의 개발사 Anysphere가 23억 달러 규모의 시리즈 D 투자를 유치했습니다. 5개월 만에 기업가치가 세 배 가까이 상승해 293억 달러에 달하며, AI 개발 도구 시장의 급성장세를 반영하고 있습니다.
-• [🔗 Crescendo AI 뉴스](https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups)
+**6️⃣ Anthropic Claude Opus 4.8 공개 (5월 28일 출시)**
+Anthropic이 Claude 4.X 시리즈 최상위 모델 Claude Opus 4.8을 출시했습니다. 추론·코딩·복잡한 작업 처리 능력이 대폭 향상됐으며, Claude Code의 기본 모델로도 채택되어 개발자 생산성 향상에 기여하고 있습니다. 모델은 현재 Anthropic API를 통해 접근 가능합니다.
+• [🔗 LLM Stats - AI 모델 최신 릴리즈 정보](https://llm-stats.com/ai-news)
 
 ---
 
-**7️⃣ 퓨리오사 AI, 브로드콤과 차세대 AI 추론 플랫폼 공동 개발 파트너십**
-국내 AI 반도체 스타트업 퓨리오사 AI가 글로벌 반도체 기업 브로드콤(Broadcom)과 차세대 AI 추론 플랫폼 공동 개발을 위한 전략적 파트너십을 체결했습니다. 이번 협력은 국산 AI 반도체의 글로벌 경쟁력 강화에 기여할 것으로 기대됩니다.
-• [🔗 클릭투데이](https://www.cliktoday.com/2026/05/20260529-today-news.html)
+**7️⃣ 한국 중기부, 2026년 AI 예산 약 8천억 원 투입**
+대한민국 중소벤처기업부가 2026년도 AI 관련 예산으로 약 8천억 원을 편성했습니다. 중소기업과 스타트업의 AI 전환을 적극 지원하며, AI 에이전트·핀테크 AI 등 다양한 분야에서 정부 주도 투자가 확대되고 있습니다.
+• [🔗 대한민국 정책브리핑 - 중기부 AI 예산](https://www.korea.kr/multi/visualNewsView.do?newsId=148957419&pWise=sub&pWiseSub=C1)
 
 ---
 
-*출처: TechCrunch, SiliconANGLE, MacRumors, LLM Stats, WhatLLM, OpenAI, NVIDIA Newsroom, Crescendo AI, 클릭투데이*`;
+*출처: OpenAI, Google Blog, LLM Stats, Motley Fool, AI Funding Tracker, Anthropic, 대한민국 정책브리핑*`;
 
 const body = JSON.stringify({ text: message });
 
