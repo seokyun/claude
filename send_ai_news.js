@@ -1,57 +1,56 @@
 const https = require('https');
 
-const message = `## 📰 AI 주요 뉴스 요약 (2026년 6월 5일)
+const message = `## 📰 AI 주요 뉴스 요약 (2026년 6월 8일)
 
 ---
 
-**1️⃣ 미국 '위대한 미국 AI법' 초안 공개 — 주(州) AI 규제 3년간 동결**
-미 하원의원 Jay Obernolte(공화당)와 Lori Trahan(민주당)이 269페이지 분량의 '위대한 미국 인공지능법(GAAIA)' 초안을 공개했습니다. 핵심 조항은 프런티어 AI 모델 관련 모든 주 AI 규제를 3년간 연방 차원에서 동결하는 것으로, 캘리포니아와 콜로라도 주 등의 AI 법안이 영향을 받을 전망입니다.
-• 🔗 [buildfastwithai.com](https://www.buildfastwithai.com/blogs/ai-news-today-june-5-2026)
-• 🔗 [JDSupra](https://www.jdsupra.com/legalnews/ai-today-in-5-june-5-2026-the-tech-re-46958/)
+**1️⃣ Apple WWDC 2026: Gemini 기반 Siri 완전 재탄생, Claude도 iPhone 기본 AI로 선택 가능**
+팀 쿡 CEO의 마지막 WWDC 기조연설에서 Apple은 Google Gemini 모델 기반으로 완전 재설계된 Siri AI를 공개했습니다. iOS 27 Extensions를 통해 사용자가 Claude, ChatGPT, Gemini 중 기본 AI 모델을 직접 선택할 수 있으며, Siri는 독립 앱으로 출시되어 멀티스텝 명령, 이미지·문서 첨부를 지원합니다. 팀 쿡은 9월 1일 회장직으로 전환 예정입니다.
+• [🔗 TechRadar - WWDC 2026 Live](https://www.techradar.com/news/live/apple-wwdc-2026-live)
+• [🔗 TechCrunch - WWDC 2026](https://techcrunch.com/2026/06/08/wwdc-2026-what-to-expect-from-siris-highly-anticipated-revamp-to-apple-intelligence-and-ios-27/)
 
 ---
 
-**2️⃣ OpenAI, ChatGPT 역대 최대 메모리 업그레이드 'Dreaming V3' 출시**
-OpenAI가 ChatGPT에 'Dreaming V3' 아키텍처 기반의 메모리 시스템을 적용했습니다. 이 업그레이드는 오래되거나 상충하는 정보를 자동으로 정리하고 사용자 행동에 맞게 동적으로 적응하며, 프리미엄 티어의 메모리 저장 용량을 2배로 확대합니다.
-• 🔗 [buildfastwithai.com](https://www.buildfastwithai.com/blogs/ai-news-today-june-5-2026)
-• 🔗 [NeuralBuddies](https://www.neuralbuddies.com/p/ai-news-recap-june-5-2026)
+**2️⃣ Anthropic, 연매출 300억 달러 돌파 — Claude Code가 성장 주도**
+Anthropic CEO 다리오 아모데이는 Claude의 연매출 환산 실적이 300억 달러에 달했으며, 2026년 1분기에 80배 성장을 기록했다고 밝혔습니다. AI 코딩 도구 Claude Code는 출시 9개월 만에 연환산 매출 25억 달러를 달성하며 기업 코딩 시장의 42~54%를 점유하고 있습니다.
+• [🔗 VentureBeat - Anthropic $30B 매출](https://venturebeat.com/technology/anthropic-says-it-hit-a-30-billion-revenue-run-rate-after-crazy-80x-growth)
+• [🔗 Anthropic 공식 발표](https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation)
 
 ---
 
-**3️⃣ Anthropic, 기업 가치 수조 원대 IPO 비공개 신청**
-Anthropic이 미국 증권거래위원회(SEC)에 S-1 등록 신청서를 비공개로 제출했습니다. 2026년 5월 기준 연간 매출 런레이트가 약 470억 달러(약 65조 원)에 달해 전년 대비 5배 성장한 것으로 알려졌습니다.
-• 🔗 [buildfastwithai.com](https://www.buildfastwithai.com/blogs/ai-news-today-june-5-2026)
-• 🔗 [theaitrack.com](https://theaitrack.com/ai-news-june-2026-in-depth-and-concise/)
+**3️⃣ Google Gemini 3.5 Flash 출시 — 플래그십급 성능, 4배 빠른 속도**
+Google은 Gemini 3.5 Flash를 출시했으며, Intelligence Index 55점을 기록하고 이전 세대 대비 4배 빠른 초당 284 토큰 속도를 달성했습니다. 코딩 및 에이전트 벤치마크에서 Gemini 3.1 Pro를 능가하며, Gemini 3.5 Pro는 다음 달 출시 예정입니다.
+• [🔗 LLM Stats - AI Updates June 2026](https://llm-stats.com/llm-updates)
+• [🔗 AI News - June 2026](https://dentro.de/ai/news/)
 
 ---
 
-**4️⃣ Qwen3 Coder Next·MiniMax 신모델 3종 동시 출시**
-알리바바의 Qwen3 Coder Next가 오늘 출시됨과 동시에, MiniMax도 M2.5 Highspeed, M2.7 Highspeed, M2.7 등 3개 모델을 공개했습니다. 2026년 현재 새 AI 모델이 평균 3일에 한 번꼴 출시되는 초고속 사이클이 지속되고 있습니다.
-• 🔗 [llm-stats.com](https://llm-stats.com/ai-news)
-• 🔗 [llm-stats.com (updates)](https://llm-stats.com/llm-updates)
+**4️⃣ NVIDIA Nemotron 3 Ultra 550B 출시 — 초대형 오픈 LLM 등장**
+NVIDIA가 6월 4일 Nemotron 3 Ultra 550B A55B 모델을 공개했습니다. 현존 최대 규모의 공개 LLM 중 하나로, AI 인프라 제공업체들이 주목하고 있습니다. 현재 AI 모델은 약 2일에 하나씩 신규 출시되는 초고속 사이클이 지속되고 있습니다.
+• [🔗 LLM Stats - AI Model Releases](https://llm-stats.com/ai-news)
+• [🔗 AI Flash Report - Model Timeline](https://aiflashreport.com/model-releases.html)
 
 ---
 
-**5️⃣ 구글, Gemini 2.0 API 전면 종료 — Gemini 3.5로 전환 완료**
-구글이 Gemini 2.0 Flash, Gemini 2.0 Flash-Lite 등 Gemini 2.0 API 전 라인업의 서비스를 공식 종료하고, 모든 API 호출을 Gemini 3.5 Flash 및 3.1 Flash-Lite로 강제 마이그레이션했습니다.
-• 🔗 [buildfastwithai.com](https://www.buildfastwithai.com/blogs/ai-news-today-june-5-2026)
+**5️⃣ Inception Mercury 2 출시 — 확산 아키텍처로 초당 1,000 토큰 돌파**
+AI 스타트업 Inception이 트랜스포머가 아닌 확산(Diffusion) 아키텍처 기반의 추론 언어 모델 Mercury 2를 출시했습니다. 병렬 토큰 생성으로 초당 1,000 토큰 이상의 속도를 달성하며 차세대 모델 아키텍처의 가능성을 보여주고 있습니다.
+• [🔗 Monthly LLM News June 2026 - Augusto Digital](https://augusto.digital/insights/blogs/monthly-llm-news-june-2026/)
 
 ---
 
-**6️⃣ 젠슨 황 엔비디아 CEO, 한국 AI 생태계 탐방 방한**
-젠슨 황 엔비디아 CEO가 6월 5일 김포공항을 통해 한국에 입국했습니다. 나흘간의 방한 일정에서 LG, 현대차그룹, 네이버 등 주요 기업 총수와 회동하고, AI·로봇 스타트업 및 대학 연구진과 협력 방안을 논의할 예정입니다.
-• 🔗 [AI타임스](https://www.aitimes.com/)
-• 🔗 [인공지능신문](https://www.aitimes.kr/)
+**6️⃣ 미국 국방부, AI 공급사 다변화 검토 — OpenAI·Google로 Claude 대체 시험**
+미 국방부(Pentagon)가 기밀 시스템에 사용 중인 Anthropic의 Claude를 OpenAI 및 Google 모델로 대체하는 방안을 테스트하고 있다고 밝혔습니다. AI 군사 활용 경쟁이 본격화되고 있는 가운데 공급사 다변화 및 보안 검토가 진행 중입니다.
+• [🔗 Build Fast With AI - June 8 News](https://www.buildfastwithai.com/blogs/ai-news-today-june-8-2026)
 
 ---
 
-**7️⃣ AI로 에너지 소비 100분의 1 절감하면서 정확도 향상 — Tufts대 연구**
-Tufts 대학교 연구팀이 기존 AI 대비 에너지 사용량을 100배 절감하면서도 정확도를 높인 새로운 AI 기술을 발표했습니다. 이 연구는 AI의 급증하는 전력 수요 문제를 해결할 돌파구로 주목받고 있습니다.
-• 🔗 [ScienceDaily](https://www.sciencedaily.com/releases/2026/04/260405003952.htm)
+**7️⃣ Google-SpaceX, AI 컴퓨팅 자원 공급 계약 체결**
+Google이 SpaceX와 클라우드 서비스 계약을 체결하고 AI 컴퓨팅 용량을 확보했습니다. AI 인프라 수요가 급증하는 가운데 빅테크와 민간 우주 기업 간의 협력이 새로운 AI 인프라 생태계를 형성하고 있습니다.
+• [🔗 AI Tools Recap - June 8](https://aitoolsrecap.com/Blog/ai-news-june-8-2026)
 
 ---
 
-*출처: buildfastwithai.com, NeuralBuddies, JDSupra, llm-stats.com, theaitrack.com, aitimes.com, aitimes.kr, sciencedaily.com*`;
+*출처: TechRadar, TechCrunch, VentureBeat, Anthropic, LLM Stats, Augusto Digital, Build Fast With AI*`;
 
 const body = JSON.stringify({ text: message });
 
