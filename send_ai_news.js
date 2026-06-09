@@ -1,56 +1,54 @@
 const https = require('https');
 
-const message = `## 📰 AI 주요 뉴스 요약 (2026년 6월 8일)
+const message = `## 📰 AI 주요 뉴스 요약 (2026년 6월 9일)
 
 ---
 
-**1️⃣ Apple WWDC 2026: Gemini 기반 Siri 완전 재탄생, Claude도 iPhone 기본 AI로 선택 가능**
-팀 쿡 CEO의 마지막 WWDC 기조연설에서 Apple은 Google Gemini 모델 기반으로 완전 재설계된 Siri AI를 공개했습니다. iOS 27 Extensions를 통해 사용자가 Claude, ChatGPT, Gemini 중 기본 AI 모델을 직접 선택할 수 있으며, Siri는 독립 앱으로 출시되어 멀티스텝 명령, 이미지·문서 첨부를 지원합니다. 팀 쿡은 9월 1일 회장직으로 전환 예정입니다.
-• [🔗 TechRadar - WWDC 2026 Live](https://www.techradar.com/news/live/apple-wwdc-2026-live)
-• [🔗 TechCrunch - WWDC 2026](https://techcrunch.com/2026/06/08/wwdc-2026-what-to-expect-from-siris-highly-anticipated-revamp-to-apple-intelligence-and-ios-27/)
+**1️⃣ OpenAI, 미국 증시 IPO 기밀 신청**
+ChatGPT 개발사 OpenAI가 미국 증시 상장을 위한 기밀 서류를 제출했습니다. 예상 기업가치는 최대 1조 달러 수준으로, Anthropic·SpaceX와 함께 AI 업계 최대 IPO 중 하나로 주목받고 있습니다.
+• [🔗 JDSupra - AI Today in 5: The OpenAI Files to go Public Edition](https://www.jdsupra.com/legalnews/ai-today-in-5-june-9-2026-the-openai-06014/)
 
 ---
 
-**2️⃣ Anthropic, 연매출 300억 달러 돌파 — Claude Code가 성장 주도**
-Anthropic CEO 다리오 아모데이는 Claude의 연매출 환산 실적이 300억 달러에 달했으며, 2026년 1분기에 80배 성장을 기록했다고 밝혔습니다. AI 코딩 도구 Claude Code는 출시 9개월 만에 연환산 매출 25억 달러를 달성하며 기업 코딩 시장의 42~54%를 점유하고 있습니다.
-• [🔗 VentureBeat - Anthropic $30B 매출](https://venturebeat.com/technology/anthropic-says-it-hit-a-30-billion-revenue-run-rate-after-crazy-80x-growth)
-• [🔗 Anthropic 공식 발표](https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation)
+**2️⃣ Apple WWDC 2026: Siri AI 업그레이드, Google과 파트너십**
+Apple이 WWDC 2026에서 Google과의 파트너십으로 강화된 'Siri AI'를 발표했습니다. 자연스러운 대화, 화면 맥락 인식, 이미지 편집, 작문 도구를 지원하며 대화 기록 기능을 갖춘 전용 앱으로 출시됩니다.
+• [🔗 Build Fast with AI - June 8 News](https://www.buildfastwithai.com/blogs/ai-news-today-june-8-2026)
+• [🔗 TechStartups - Top Tech News June 9](https://techstartups.com/2026/06/09/top-tech-news-today-june-9-2026/)
 
 ---
 
-**3️⃣ Google Gemini 3.5 Flash 출시 — 플래그십급 성능, 4배 빠른 속도**
-Google은 Gemini 3.5 Flash를 출시했으며, Intelligence Index 55점을 기록하고 이전 세대 대비 4배 빠른 초당 284 토큰 속도를 달성했습니다. 코딩 및 에이전트 벤치마크에서 Gemini 3.1 Pro를 능가하며, Gemini 3.5 Pro는 다음 달 출시 예정입니다.
-• [🔗 LLM Stats - AI Updates June 2026](https://llm-stats.com/llm-updates)
-• [🔗 AI News - June 2026](https://dentro.de/ai/news/)
+**3️⃣ 중국, 2,950억 달러 AI 인프라 투자 계획 추진**
+중국이 글로벌 AI 패권 경쟁에서 주도권을 확보하기 위해 약 2,950억 달러 규모의 AI 인프라 구축 계획을 발표했습니다. 데이터센터, 전력망, 위성 네트워크 등 핵심 인프라 전반에 걸친 대규모 투자입니다.
+• [🔗 TechStartups - Top Tech News June 9](https://techstartups.com/2026/06/09/top-tech-news-today-june-9-2026/)
 
 ---
 
-**4️⃣ NVIDIA Nemotron 3 Ultra 550B 출시 — 초대형 오픈 LLM 등장**
-NVIDIA가 6월 4일 Nemotron 3 Ultra 550B A55B 모델을 공개했습니다. 현존 최대 규모의 공개 LLM 중 하나로, AI 인프라 제공업체들이 주목하고 있습니다. 현재 AI 모델은 약 2일에 하나씩 신규 출시되는 초고속 사이클이 지속되고 있습니다.
+**4️⃣ NVIDIA Nemotron 3 Ultra 550B 및 MiniMax M3 출시**
+NVIDIA가 5,500억 파라미터 규모의 Nemotron 3 Ultra 550B를 공개했으며, MiniMax도 M2.5 Highspeed·M2.7·M3 등 여러 모델을 6월 초 연속 출시했습니다. Google Gemma 4 12B, Alibaba Qwen3.7 Plus도 이달 공개되며 LLM 경쟁이 가속화되고 있습니다.
 • [🔗 LLM Stats - AI Model Releases](https://llm-stats.com/ai-news)
 • [🔗 AI Flash Report - Model Timeline](https://aiflashreport.com/model-releases.html)
 
 ---
 
 **5️⃣ Inception Mercury 2 출시 — 확산 아키텍처로 초당 1,000 토큰 돌파**
-AI 스타트업 Inception이 트랜스포머가 아닌 확산(Diffusion) 아키텍처 기반의 추론 언어 모델 Mercury 2를 출시했습니다. 병렬 토큰 생성으로 초당 1,000 토큰 이상의 속도를 달성하며 차세대 모델 아키텍처의 가능성을 보여주고 있습니다.
-• [🔗 Monthly LLM News June 2026 - Augusto Digital](https://augusto.digital/insights/blogs/monthly-llm-news-june-2026/)
+AI 스타트업 Inception이 트랜스포머가 아닌 확산(Diffusion) 아키텍처 기반의 추론 언어 모델 Mercury 2를 출시했습니다. 토큰을 병렬 생성해 초당 1,000 토큰 이상의 속도를 달성하며 차세대 모델 아키텍처 가능성을 보여줬습니다.
+• [🔗 LLM Updates - June 2026](https://llm-stats.com/llm-updates)
 
 ---
 
-**6️⃣ 미국 국방부, AI 공급사 다변화 검토 — OpenAI·Google로 Claude 대체 시험**
-미 국방부(Pentagon)가 기밀 시스템에 사용 중인 Anthropic의 Claude를 OpenAI 및 Google 모델로 대체하는 방안을 테스트하고 있다고 밝혔습니다. AI 군사 활용 경쟁이 본격화되고 있는 가운데 공급사 다변화 및 보안 검토가 진행 중입니다.
-• [🔗 Build Fast With AI - June 8 News](https://www.buildfastwithai.com/blogs/ai-news-today-june-8-2026)
+**6️⃣ GitHub Copilot, 요청제에서 종량제 과금으로 전환**
+Microsoft의 GitHub이 Copilot 과금 방식을 기존 요청 기반에서 사용량 기반 종량제(metered billing)로 변경합니다. 추론 비용 급증으로 무제한 구독 모델의 수익성이 어려워진 것이 주된 이유입니다.
+• [🔗 Build MVP Fast - Best AI Models June 2026](https://www.buildmvpfast.com/articles/best-llms-2026-guide)
 
 ---
 
-**7️⃣ Google-SpaceX, AI 컴퓨팅 자원 공급 계약 체결**
-Google이 SpaceX와 클라우드 서비스 계약을 체결하고 AI 컴퓨팅 용량을 확보했습니다. AI 인프라 수요가 급증하는 가운데 빅테크와 민간 우주 기업 간의 협력이 새로운 AI 인프라 생태계를 형성하고 있습니다.
-• [🔗 AI Tools Recap - June 8](https://aitoolsrecap.com/Blog/ai-news-june-8-2026)
+**7️⃣ OpenAI, AI 경제 영향 연구 플랫폼 'Economic Research Exchange' 출시**
+OpenAI가 AI가 노동자·기업·경제에 미치는 영향을 연구하는 외부 연구자 지원 플랫폼을 론치했습니다. 프라이버시 보호 협업을 통해 실증적 증거를 쌓는 것이 목적으로, AI의 경제적 파급력 투명화를 추구합니다.
+• [🔗 JDSupra - AI Today in 5](https://www.jdsupra.com/legalnews/ai-today-in-5-june-9-2026-the-openai-06014/)
 
 ---
 
-*출처: TechRadar, TechCrunch, VentureBeat, Anthropic, LLM Stats, Augusto Digital, Build Fast With AI*`;
+*출처: JDSupra, TechStartups, Build Fast with AI, LLM Stats, AI Flash Report, Build MVP Fast*`;
 
 const body = JSON.stringify({ text: message });
 
