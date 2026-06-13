@@ -1,53 +1,55 @@
 const https = require('https');
 
-const message = `## 📰 AI 주요 뉴스 요약 (2026년 6월 11일)
+const message = `## 📰 AI 주요 뉴스 요약 (2026년 6월 13일)
 
 ---
 
-**1️⃣ OpenAI·Anthropic, 잇따라 IPO 비밀 신청**
-Anthropic이 6월 1일 약 9,650억 달러 가치로 IPO를 비밀 신청한 데 이어, OpenAI도 6월 8일 약 8,520억 달러 가치로 IPO를 비밀 신청했습니다. AI 업계 양대 선두주자의 동시 상장 움직임으로 업계의 이목이 집중되고 있습니다.
-• [🔗 TechCrunch](https://techcrunch.com/2026/06/08/following-anthropic-openai-files-confidentially-for-ipo/)
+**1️⃣ Anthropic, 미국 기업 AI 시장에서 처음으로 OpenAI 추월**
+Ramp AI 인덱스에 따르면 Anthropic이 미국 기업 AI 지출 점유율에서 처음으로 OpenAI를 앞질렀습니다. 4월부터 시작된 이 역전은 Claude 모델의 기업 수요 급증이 배경이며, Claude Opus 4.8 출시 이후 더욱 가속화되었습니다.
+• [🔗 buildfastwithai.com](https://www.buildfastwithai.com/blogs/ai-news-today-june-13-2026)
 
 ---
 
-**2️⃣ Anthropic, 프론티어 AI 개발 글로벌 일시 중단 촉구**
-Anthropic이 6월 4일 "When AI builds itself"를 발표하며, AI 시스템이 자체 개발 속도를 가속화하고 있어 기존 안전·거버넌스 프레임워크를 초과할 위험이 있다고 경고했습니다. 프론티어 AI 개발의 국제적 조율 및 일시 중단을 제안했습니다.
-• [🔗 Anthropic Newsroom](https://www.anthropic.com/news)
-• [🔗 Shumaker Law Alert](https://www.shumaker.com/insight/client-alert-anthropics-call-for-a-global-ai-pause-what-businesses-need-to-know-about-the-governance-landscape/)
+**2️⃣ Claude Opus 4.8, AI 성능 벤치마크 세계 1위 달성**
+5월 28일 출시된 Anthropic의 Claude Opus 4.8이 Artificial Analysis Intelligence Index에서 61점으로 1위에 올랐습니다. GPT-5.5(59점)와 Gemini 3.1 Pro(57점)를 제치며 Anthropic 모델로서는 처음으로 종합 1위를 기록했습니다.
+• [🔗 llm-stats.com](https://llm-stats.com/ai-news)
+• [🔗 felloai.com](https://felloai.com/best-ai-models/)
 
 ---
 
-**3️⃣ Apple iOS 27, Gemini 기반 Siri 및 Claude 연동 공개**
-6월 8일 팀 쿡이 Gemini로 구동되는 새로운 Siri와 다중 AI 확장(Extensions) 시스템을 발표했습니다. Claude가 iPhone에서 직접 사용할 수 있는 AI 옵션으로 처음 추가되었으며, iOS 27 베타 1도 같은 날 출시되었습니다.
-• [🔗 LLM Updates (llm-stats.com)](https://llm-stats.com/llm-updates)
+**3️⃣ DXC Technology & Anthropic, 기업 핵심 인프라 AI 전환 다년 파트너십 체결**
+6월 11일 DXC Technology와 Anthropic이 멀티년 글로벌 동맹을 발표했습니다. DXC는 수만 명의 Claude 인증 엔지니어를 양성하여 주요 은행, 항공사, 보험사, 제조업체, 정부기관의 미션 크리티컬 IT 시스템에 Claude를 도입할 예정입니다.
+• [🔗 dxc.com](https://dxc.com/newsroom/06112026-dxc-and-anthropic-announce-multi-year-global-alliance-to-bring-ai-into-mission-critical-enterprise-systems)
 
 ---
 
-**4️⃣ OpenAI, Oracle Cloud를 통한 엔터프라이즈 모델 공급 확대**
-OpenAI가 엔터프라이즈 고객들이 기존 Oracle Universal Credits(UCM)으로 OpenAI 프론티어 모델과 Codex에 접근할 수 있도록 공식 발표했습니다. Oracle Cloud Infrastructure 고객은 별도 계약 없이 OpenAI 기술을 바로 활용할 수 있게 됩니다.
-• [🔗 BuildFastWithAI](https://www.buildfastwithai.com/blogs/ai-news-today-june-11-2026)
+**4️⃣ TCS, Anthropic과 전략적 파트너십 체결 — 5만 직원에 Claude 도입**
+타타 컨설팅 서비스(TCS)가 Anthropic과 글로벌 전략적 파트너십을 맺고, 엔지니어링·재무·법무·마케팅·영업 등 5만 명 직원에게 Claude 접근 권한을 부여합니다. TCS는 Claude 모델 기반 산업별 솔루션 개발을 위한 전담 사업부를 설립할 예정입니다.
+• [🔗 verdict.co.uk](https://www.verdict.co.uk/tcs-partners-with-anthropic/)
+• [🔗 w.media](https://w.media/tcs-partners-with-anthropic-to-drive-enterprise-ai-adoption/)
 
 ---
 
-**5️⃣ Inception, 초당 1,000토큰 이상 처리하는 'Mercury 2' 출시**
-Inception이 확산(Diffusion) 아키텍처 기반의 추론 언어 모델 Mercury 2를 공개했습니다. 토큰을 병렬로 생성해 초당 1,000토큰 이상의 속도를 달성하며, 에이전틱 루프 및 실시간 음성 인터랙션 등 프로덕션 환경을 겨냥한 모델입니다.
-• [🔗 LLM Stats AI News](https://llm-stats.com/ai-news)
+**5️⃣ Inception, 초당 1,000토큰 생성 가능한 확산 아키텍처 추론 모델 'Mercury 2' 출시**
+Inception이 확산(Diffusion) 아키텍처를 기반으로 하는 추론 언어 모델 Mercury 2를 출시했습니다. 토큰을 병렬로 생성해 초당 1,000토큰 이상의 속도를 달성하며, 에이전틱 루프 및 실시간 음성 인터랙션 같은 지연 시간이 중요한 프로덕션 환경을 겨냥합니다.
+• [🔗 llm-stats.com](https://llm-stats.com/llm-updates)
 
 ---
 
-**6️⃣ KPMG·Microsoft, 글로벌 엔터프라이즈 AI 에이전트 대규모 배포 발표**
-KPMG와 Microsoft가 6월 9일 협력 확대를 발표했습니다. KPMG는 Microsoft Agent 365를 도입해 고객사의 AI 에이전트 관리·모니터링·보안을 지원하고, 전 글로벌 인력에 Microsoft 365 Copilot을 배포하는 계획입니다.
-• [🔗 Microsoft Source](https://news.microsoft.com/source/2026/06/09/kpmg-and-microsoft-scale-trusted-enterprise-ai-agents-globally-through-deployment-of-agent-365-and-copilot/)
+**6️⃣ Moonshot AI, Kimi K2.7-Code 공개 — 추론 효율 30% 개선**
+중국 AI 스타트업 Moonshot AI가 Kimi K2.7-Code를 MIT 라이선스로 공개했습니다. 이전 버전 K2.6 대비 추론 토큰 사용량을 30% 절감한 코딩 특화 모델로, 오픈소스 커뮤니티의 주목을 받고 있습니다.
+• [🔗 llm-stats.com](https://llm-stats.com/ai-news)
 
 ---
 
-**7️⃣ 성인 85%, AI 생성 콘텐츠와 실제 구별 못해**
-최신 조사에 따르면 AI 생성 콘텐츠를 실제와 구별할 수 없다고 답한 성인 비율이 2025년 66%에서 2026년 85%로 급증했습니다. AI 딥페이크와 사기 문제가 사회 전반에 걸쳐 심각한 우려로 부상하고 있습니다.
-• [🔗 Help Net Security](https://www.helpnetsecurity.com/2026/06/11/ai-scams-deepfakes-survey/)
+**7️⃣ Anthropic, IPO를 위해 SEC에 S-1 초안 기밀 제출**
+Anthropic이 6월 1일 미국 증권거래위원회(SEC)에 S-1 초안을 기밀 제출하며 IPO 절차를 공식 시작했습니다. SpaceX의 나스닥 상장 성공 이후 AI 인프라 기업 밸류에이션에 대한 시장의 관심이 높아진 가운데, Anthropic의 기업가치는 수천억 달러에 달할 것으로 예상됩니다.
+• [🔗 buildfastwithai.com](https://www.buildfastwithai.com/blogs/ai-news-today-june-13-2026)
+• [🔗 useluminix.com](https://www.useluminix.com/reports/company-overviews/what-do-we-know-about-the-anthropic-ipo/source/3)
 
 ---
 
-*출처: BuildFastWithAI, TechCrunch, Anthropic, LLM Stats, Microsoft Source, Help Net Security*`;
+*출처: buildfastwithai.com, llm-stats.com, dxc.com, verdict.co.uk, felloai.com, w.media, useluminix.com*`;
 
 const body = JSON.stringify({ text: message });
 
