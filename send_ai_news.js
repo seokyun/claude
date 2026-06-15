@@ -1,55 +1,57 @@
 const https = require('https');
 
-const message = `## 📰 AI 주요 뉴스 요약 (2026년 6월 13일)
+const message = `## 📰 AI 주요 뉴스 요약 (2026년 6월 15일)
 
 ---
 
-**1️⃣ Anthropic, 미국 기업 AI 시장에서 처음으로 OpenAI 추월**
-Ramp AI 인덱스에 따르면 Anthropic이 미국 기업 AI 지출 점유율에서 처음으로 OpenAI를 앞질렀습니다. 4월부터 시작된 이 역전은 Claude 모델의 기업 수요 급증이 배경이며, Claude Opus 4.8 출시 이후 더욱 가속화되었습니다.
-• [🔗 buildfastwithai.com](https://www.buildfastwithai.com/blogs/ai-news-today-june-13-2026)
+**1️⃣ OpenAI, Sora 서비스 전격 중단**
+OpenAI가 동영상 생성 AI 서비스 Sora를 공식 종료했습니다. 하루 운영 비용이 약 1,500만 달러에 달했지만 총 매출은 210만 달러에 불과해 수익성 악화가 주요 원인으로 분석됩니다.
+• [🔗 Build Fast with AI](https://www.buildfastwithai.com/blogs/ai-news-today-june-15-2026)
+• [🔗 unrot.co](https://unrot.co/blogs/ai-news-today-june-15-2026)
 
 ---
 
-**2️⃣ Claude Opus 4.8, AI 성능 벤치마크 세계 1위 달성**
-5월 28일 출시된 Anthropic의 Claude Opus 4.8이 Artificial Analysis Intelligence Index에서 61점으로 1위에 올랐습니다. GPT-5.5(59점)와 Gemini 3.1 Pro(57점)를 제치며 Anthropic 모델로서는 처음으로 종합 1위를 기록했습니다.
-• [🔗 llm-stats.com](https://llm-stats.com/ai-news)
-• [🔗 felloai.com](https://felloai.com/best-ai-models/)
+**2️⃣ NAVER Cloud & NVIDIA, 기가와트급 AI 팩토리 구축 협약**
+NAVER Cloud와 NVIDIA가 한국에 기가와트 규모의 AI 팩토리를 구축하는 전략적 파트너십을 체결했습니다. 2027년 세종 55MW를 시작으로 2028년 200MW까지 확대할 계획이며, NVIDIA DSX 플랫폼 기반의 풀스택 인프라를 적용합니다.
+• [🔗 NAVER Corp 공식 발표](https://navercorp.com/en/media/pressReleasesDetail?seq=10034347)
+• [🔗 Tech Times](https://www.techtimes.com/articles/318006/20260609/naver-nvidia-seal-1gw-ai-factory-plan-dsx-platform-powers-korea-sovereign-cloud.htm)
 
 ---
 
-**3️⃣ DXC Technology & Anthropic, 기업 핵심 인프라 AI 전환 다년 파트너십 체결**
-6월 11일 DXC Technology와 Anthropic이 멀티년 글로벌 동맹을 발표했습니다. DXC는 수만 명의 Claude 인증 엔지니어를 양성하여 주요 은행, 항공사, 보험사, 제조업체, 정부기관의 미션 크리티컬 IT 시스템에 Claude를 도입할 예정입니다.
-• [🔗 dxc.com](https://dxc.com/newsroom/06112026-dxc-and-anthropic-announce-multi-year-global-alliance-to-bring-ai-into-mission-critical-enterprise-systems)
+**3️⃣ Google Gemini 3.5 Pro, 6월 말 출시 임박**
+Google의 차세대 모델 Gemini 3.5 Pro가 200만 토큰 컨텍스트 창과 Deep Think 추론 모드를 탑재하고 6월 30일 이전 출시를 앞두고 있습니다.
+• [🔗 LLM Stats](https://llm-stats.com/ai-news)
+• [🔗 AI News Today](https://www.buildfastwithai.com/blogs/ai-news-today-june-15-2026)
 
 ---
 
-**4️⃣ TCS, Anthropic과 전략적 파트너십 체결 — 5만 직원에 Claude 도입**
-타타 컨설팅 서비스(TCS)가 Anthropic과 글로벌 전략적 파트너십을 맺고, 엔지니어링·재무·법무·마케팅·영업 등 5만 명 직원에게 Claude 접근 권한을 부여합니다. TCS는 Claude 모델 기반 산업별 솔루션 개발을 위한 전담 사업부를 설립할 예정입니다.
-• [🔗 verdict.co.uk](https://www.verdict.co.uk/tcs-partners-with-anthropic/)
-• [🔗 w.media](https://w.media/tcs-partners-with-anthropic-to-drive-enterprise-ai-adoption/)
+**4️⃣ OpenAI, 1억 5,000만 달러 규모 파트너 네트워크 출범**
+OpenAI가 글로벌 기업의 AI 도입을 가속화하기 위해 1억 5,000만 달러를 투자하는 파트너 네트워크를 공식 출범했습니다. 전 세계 파트너사와 협력해 엔터프라이즈 AI 전환을 지원할 예정입니다.
+• [🔗 Build Fast with AI](https://www.buildfastwithai.com/blogs/ai-news-today-june-15-2026)
 
 ---
 
-**5️⃣ Inception, 초당 1,000토큰 생성 가능한 확산 아키텍처 추론 모델 'Mercury 2' 출시**
-Inception이 확산(Diffusion) 아키텍처를 기반으로 하는 추론 언어 모델 Mercury 2를 출시했습니다. 토큰을 병렬로 생성해 초당 1,000토큰 이상의 속도를 달성하며, 에이전틱 루프 및 실시간 음성 인터랙션 같은 지연 시간이 중요한 프로덕션 환경을 겨냥합니다.
-• [🔗 llm-stats.com](https://llm-stats.com/llm-updates)
+**5️⃣ MiniMax M3, 오픈웨이트 모델 SWE-Bench Pro 1위 달성**
+MiniMax가 오픈웨이트 모델 최초로 프론티어급 코딩, 100만 토큰 컨텍스트, 네이티브 멀티모달리티를 결합한 M3를 출시했습니다. 오픈웨이트 SWE-Bench Pro에서 59.0%로 1위를 기록했습니다.
+• [🔗 Morph LLM 코딩 모델 랭킹](https://www.morphllm.com/best-ai-model-for-coding)
+• [🔗 Atlas Cloud Blog](https://www.atlascloud.ai/blog/guides/kimi-k2-6-vs-glm-5-1-vs-qwen-3-6-plus-vs-minimax-m2-7-coding-2026)
 
 ---
 
-**6️⃣ Moonshot AI, Kimi K2.7-Code 공개 — 추론 효율 30% 개선**
-중국 AI 스타트업 Moonshot AI가 Kimi K2.7-Code를 MIT 라이선스로 공개했습니다. 이전 버전 K2.6 대비 추론 토큰 사용량을 30% 절감한 코딩 특화 모델로, 오픈소스 커뮤니티의 주목을 받고 있습니다.
-• [🔗 llm-stats.com](https://llm-stats.com/ai-news)
+**6️⃣ 미국 HHS, ChatGPT로 메디케이드 부정수급 최대 2,000억 달러 조사**
+미국 보건복지부(HHS)가 ChatGPT를 활용해 50개 주 전체 메디케이드 감사 자료를 분석, 최대 2,000억 달러 규모의 부정수급 의혹을 조사하고 있습니다. AI의 정부 업무 활용 사례로 주목받고 있습니다.
+• [🔗 unrot.co](https://unrot.co/blogs/ai-news-today-june-15-2026)
+• [🔗 Build Fast with AI](https://www.buildfastwithai.com/blogs/ai-news-today-june-15-2026)
 
 ---
 
-**7️⃣ Anthropic, IPO를 위해 SEC에 S-1 초안 기밀 제출**
-Anthropic이 6월 1일 미국 증권거래위원회(SEC)에 S-1 초안을 기밀 제출하며 IPO 절차를 공식 시작했습니다. SpaceX의 나스닥 상장 성공 이후 AI 인프라 기업 밸류에이션에 대한 시장의 관심이 높아진 가운데, Anthropic의 기업가치는 수천억 달러에 달할 것으로 예상됩니다.
-• [🔗 buildfastwithai.com](https://www.buildfastwithai.com/blogs/ai-news-today-june-13-2026)
-• [🔗 useluminix.com](https://www.useluminix.com/reports/company-overviews/what-do-we-know-about-the-anthropic-ipo/source/3)
+**7️⃣ 기업 AI 투자 94% 증가, 절반은 "도입 속도 너무 빠르다" 우려**
+Logicalis 2026 글로벌 CIO 보고서에 따르면 94%의 기업이 지난 1년간 AI 투자를 늘렸지만, 51%는 이미 도입 속도가 너무 빠르다고 우려하는 것으로 나타났습니다.
+• [🔗 LLM Stats](https://llm-stats.com/ai-news)
 
 ---
 
-*출처: buildfastwithai.com, llm-stats.com, dxc.com, verdict.co.uk, felloai.com, w.media, useluminix.com*`;
+*출처: Build Fast with AI, LLM Stats, NAVER Corp, Tech Times, Morph LLM, unrot.co, Atlas Cloud Blog*`;
 
 const body = JSON.stringify({ text: message });
 
