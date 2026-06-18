@@ -1,60 +1,53 @@
 const https = require('https');
 
-const message = `## 📰 AI 주요 뉴스 요약 (2026년 6월 15일)
+const text = `## 📰 AI 주요 뉴스 요약 (2026년 6월 18일)
 
 ---
 
-**1️⃣ OpenAI, Sora 서비스 전격 중단**
-OpenAI가 동영상 생성 AI 서비스 Sora를 공식 종료했습니다. 하루 운영 비용이 약 1,500만 달러에 달했지만 총 매출은 210만 달러에 불과해 수익성 악화가 주요 원인으로 분석됩니다.
-• [🔗 Build Fast with AI](https://www.buildfastwithai.com/blogs/ai-news-today-june-15-2026)
-• [🔗 unrot.co](https://unrot.co/blogs/ai-news-today-june-15-2026)
+**1️⃣ 과기정통부-앤트로픽, AI 안전·사이버보안 MOU 체결**
+과학기술정보통신부가 앤트로픽과 AI 안전성 확보 및 사이버보안 분야 협력을 위한 MOU를 체결했다. 한국어 맥락의 AI 모델 안전성·오남용 위험 평가와 자율형 AI 에이전트 레드팀 평가 등을 함께 추진하며, 앤트로픽은 일본·인도·호주에 이어 한국에 정식 사무소를 개소했다.
+• [🔗 전자신문](https://www.etnews.com/20260618000235)
+• [🔗 머니투데이](https://www.mt.co.kr/tech/2026/06/18/2026061717245936553)
 
 ---
 
-**2️⃣ NAVER Cloud & NVIDIA, 기가와트급 AI 팩토리 구축 협약**
-NAVER Cloud와 NVIDIA가 한국에 기가와트 규모의 AI 팩토리를 구축하는 전략적 파트너십을 체결했습니다. 2027년 세종 55MW를 시작으로 2028년 200MW까지 확대할 계획이며, NVIDIA DSX 플랫폼 기반의 풀스택 인프라를 적용합니다.
-• [🔗 NAVER Corp 공식 발표](https://navercorp.com/en/media/pressReleasesDetail?seq=10034347)
-• [🔗 Tech Times](https://www.techtimes.com/articles/318006/20260609/naver-nvidia-seal-1gw-ai-factory-plan-dsx-platform-powers-korea-sovereign-cloud.htm)
+**2️⃣ SK하이닉스, 차세대 HBM4E 12단 샘플 주요 고객사 공급**
+SK하이닉스가 차세대 AI용 초고성능 D램 'HBM4E' 12단 샘플을 주요 고객사에 공급했다고 밝혔다. 핀당 최대 16Gbps 속도와 20% 이상의 에너지 효율 개선, 48GB 용량을 구현해 삼성과의 차세대 메모리 경쟁이 본격화됐다.
+• [🔗 전자신문](https://www.etnews.com/20260618000019)
+• [🔗 파이낸셜뉴스](https://www.fnnews.com/news/202606180849075531)
 
 ---
 
-**3️⃣ Google Gemini 3.5 Pro, 6월 말 출시 임박**
-Google의 차세대 모델 Gemini 3.5 Pro가 200만 토큰 컨텍스트 창과 Deep Think 추론 모드를 탑재하고 6월 30일 이전 출시를 앞두고 있습니다.
-• [🔗 LLM Stats](https://llm-stats.com/ai-news)
-• [🔗 AI News Today](https://www.buildfastwithai.com/blogs/ai-news-today-june-15-2026)
+**3️⃣ 구글, 'Gemini CLI'를 'Antigravity CLI'로 전면 교체**
+구글이 6월 18일부로 무료·개인 사용자 대상 Gemini CLI 및 Gemini Code Assist 서비스를 종료하고, 비동기 멀티에이전트 워크플로를 지원하는 후속 도구 Antigravity CLI로 전환했다. 기존 워크플로·CI/CD 파이프라인을 구축한 개발자는 마이그레이션이 필요하다.
+• [🔗 OSTechNix](https://ostechnix.com/google-is-replacing-gemini-cli-with-google-antigravity/)
+• [🔗 KuCoin News](https://www.kucoin.com/news/flash/google-to-deprecate-old-gemini-cli-by-june-18-2026-pushes-antigravity-cli)
 
 ---
 
-**4️⃣ OpenAI, 1억 5,000만 달러 규모 파트너 네트워크 출범**
-OpenAI가 글로벌 기업의 AI 도입을 가속화하기 위해 1억 5,000만 달러를 투자하는 파트너 네트워크를 공식 출범했습니다. 전 세계 파트너사와 협력해 엔터프라이즈 AI 전환을 지원할 예정입니다.
-• [🔗 Build Fast with AI](https://www.buildfastwithai.com/blogs/ai-news-today-june-15-2026)
+**4️⃣ 아모데이 "AI 분열 막아야"... G7서 올트먼도 동조**
+앤트로픽 CEO 다리오 아모데이가 G7 정상회의에서 동맹국 간 AI 접근·기준이 쪼개지면 안보 협력이 약화될 수 있다고 경고했다. 오픈AI 샘 올트먼도 이에 동조했으며, 마크롱 프랑스 대통령과 모디 인도 총리도 동맹국의 프런티어 AI 접근권 보장을 촉구했다.
+• [🔗 Benzinga](https://www.benzinga.com/markets/tech/26/06/53268905/anthropic-ceo-dario-amodei-finds-rare-ally-in-rival-openais-sam-altman-as-he-warns-g7-leaders-against-ai-fragmentation-risk)
+• [🔗 TechCrunch](https://techcrunch.com/2026/06/17/world-leaders-want-american-ai-they-just-dont-want-america-to-be-able-to-turn-it-off/)
 
 ---
 
-**5️⃣ MiniMax M3, 오픈웨이트 모델 SWE-Bench Pro 1위 달성**
-MiniMax가 오픈웨이트 모델 최초로 프론티어급 코딩, 100만 토큰 컨텍스트, 네이티브 멀티모달리티를 결합한 M3를 출시했습니다. 오픈웨이트 SWE-Bench Pro에서 59.0%로 1위를 기록했습니다.
-• [🔗 Morph LLM 코딩 모델 랭킹](https://www.morphllm.com/best-ai-model-for-coding)
-• [🔗 Atlas Cloud Blog](https://www.atlascloud.ai/blog/guides/kimi-k2-6-vs-glm-5-1-vs-qwen-3-6-plus-vs-minimax-m2-7-coding-2026)
+**5️⃣ 엔비디아, 5500억 파라미터 오픈모델 'Nemotron 3 Ultra' 출시**
+엔비디아가 550B 규모의 MoE 기반 하이브리드 Mamba-Transformer 오픈모델 'Nemotron 3 Ultra'를 공개했다. 100만 토큰 컨텍스트와 기존 오픈모델 대비 최대 6배 높은 추론 처리량을 갖춰 장시간 작업하는 에이전트용으로 설계됐으며, 가중치와 학습 데이터를 공개했다.
+• [🔗 MarkTechPost](https://www.marktechpost.com/2026/06/04/nvidia-ai-releases-nemotron-3-ultra-an-open-550b-mixture-of-experts-hybrid-mamba-transformer-for-long-running-agents/)
 
 ---
 
-**6️⃣ 미국 HHS, ChatGPT로 메디케이드 부정수급 최대 2,000억 달러 조사**
-미국 보건복지부(HHS)가 ChatGPT를 활용해 50개 주 전체 메디케이드 감사 자료를 분석, 최대 2,000억 달러 규모의 부정수급 의혹을 조사하고 있습니다. AI의 정부 업무 활용 사례로 주목받고 있습니다.
-• [🔗 unrot.co](https://unrot.co/blogs/ai-news-today-june-15-2026)
-• [🔗 Build Fast with AI](https://www.buildfastwithai.com/blogs/ai-news-today-june-15-2026)
+**6️⃣ 앤트로픽, 'Claude Fable 5'·'Mythos 5' 정식 출시**
+앤트로픽이 코딩·과학 분야에서 큰 성능 향상을 이룬 신모델 'Claude Fable 5'와 'Claude Mythos 5'를 출시했다. 100만 토큰 컨텍스트와 최대 12만8000 출력 토큰을 지원하며, Fable 5는 요청을 거부할 수 있는 안전 분류기를 포함해 일반 API로 제공된다.
+• [🔗 Anthropic](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+• [🔗 TechCrunch](https://techcrunch.com/2026/06/09/anthropic-released-claude-fable-5-its-most-powerful-model-publicly-days-after-warning-ai-is-getting-too-dangerous/)
 
 ---
 
-**7️⃣ 기업 AI 투자 94% 증가, 절반은 "도입 속도 너무 빠르다" 우려**
-Logicalis 2026 글로벌 CIO 보고서에 따르면 94%의 기업이 지난 1년간 AI 투자를 늘렸지만, 51%는 이미 도입 속도가 너무 빠르다고 우려하는 것으로 나타났습니다.
-• [🔗 LLM Stats](https://llm-stats.com/ai-news)
+*출처: 전자신문, 머니투데이, 파이낸셜뉴스, OSTechNix, KuCoin News, Benzinga, TechCrunch, MarkTechPost, Anthropic*`;
 
----
-
-*출처: Build Fast with AI, LLM Stats, NAVER Corp, Tech Times, Morph LLM, unrot.co, Atlas Cloud Blog*`;
-
-const body = JSON.stringify({ text: message });
-
+const body = JSON.stringify({ text });
 const options = {
   hostname: 'matter.goodrich.kr',
   path: '/hooks/g9uigh6xyfgm7nkp8ogitwod4w',
@@ -67,16 +60,13 @@ const options = {
 
 const req = https.request(options, (res) => {
   let data = '';
-  res.on('data', (d) => {
-    data += d.toString();
-    process.stdout.write(d);
-  });
+  res.on('data', (d) => { data += d.toString(); process.stdout.write(d); });
   res.on('end', () => {
     console.log('');
     if (data.trim() === 'ok') {
       console.log('✅ Mattermost 발송 성공!');
     } else {
-      console.log('응답: ' + data);
+      console.log(`응답: status=${res.statusCode}, body=${data}`);
     }
   });
 });
